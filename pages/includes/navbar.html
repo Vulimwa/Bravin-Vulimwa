@@ -1,0 +1,244 @@
+<style>
+  .active-nav-link {
+    background-color: var(--c-blue) !important;
+  }
+</style>
+<header class="fixed inset-x-0 top-0 z-[100]">
+  <div
+    class="flex h-[64px] items-stretch border-b border-black/10 bg-white pl-5 pr-4 sm:pl-8 sm:pr-6"
+  >
+    <a aria-label="Home" class="flex items-center pr-6" href="{{HOME_HREF}}"
+      ><svg
+        width="36"
+        height="28"
+        viewBox="0 0 36 28"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M6 26C6 19.4 11.4 14 18 14s12 5.4 12 12"
+          stroke="var(--ink)"
+          stroke-width="3.4"
+        ></path>
+        <path
+          d="M11.5 26c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"
+          stroke="var(--ink)"
+          stroke-width="3.4"
+        ></path>
+        <path
+          d="M1 26C1 16.6 8.6 9 18 9s17 7.6 17 17"
+          stroke="var(--ink)"
+          stroke-width="3.4"
+        ></path></svg
+    ></a>
+    <nav aria-label="Main" class="hidden items-stretch md:flex">
+      <a
+        class="flex items-center gap-2.5 px-6 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] transition-colors hover:bg-[var(--c-cream)]"
+        href="{{HOME_HREF}}"
+        data-nav-key="home"
+        ><span aria-hidden="true"
+          ><svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 3.2 2.8 10.8h2.6V21h6V14.6h1.2V21h6V10.8h2.6L12 3.2z"
+            ></path></svg></span
+        >HOME</a
+      ><a
+        class="flex items-center gap-2.5 px-6 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] transition-colors hover:bg-[var(--c-cream)]"
+        href="{{ABOUT_HREF}}"
+        data-nav-key="about"
+        ><span aria-hidden="true"
+          ><svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2v20M3.34 7l17.32 10M20.66 7L3.34 17"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+            ></path></svg></span
+        >ABOUT</a
+      ><a
+        class="flex items-center gap-2.5 px-6 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] transition-colors hover:bg-[var(--c-cream)]"
+        href="{{WORK_HREF}}"
+        data-nav-key="work"
+        ><span aria-hidden="true"
+          ><svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 11.2C8.2 11.2 5.2 8.8 5.2 5.4V3.6h13.6v1.8c0 3.4-3 5.8-6.8 5.8zm0 1.6c3.8 0 6.8 2.4 6.8 5.8v1.8H5.2v-1.8c0-3.4 3-5.8 6.8-5.8z"
+            ></path></svg></span
+        >WORK</a
+      >
+    </nav>
+    <div class="ml-auto hidden items-center gap-3 md:flex">
+      <span class="group relative flex"
+        ><a
+          href="mailto:vulimwabravin@gmail.com"
+          title="Email"
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 font-mono text-xs font-semibold text-[var(--ink)] transition-colors group-hover:bg-[var(--c-blue)]"
+          >EM</a
+        ><span
+          aria-hidden="true"
+          class="pointer-events-none absolute right-0 top-full mt-4 hidden whitespace-nowrap bg-[var(--c-blue)] px-5 py-3.5 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] group-hover:block"
+          >VULIMWABRAVIN@GMAIL.COM</span
+        ></span
+      ><span class="group relative flex"
+        ><a
+          href="https://github.com/Vulimwa"
+          title="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 font-mono text-xs font-semibold text-[var(--ink)] transition-colors group-hover:bg-[var(--c-blue)]"
+          >GH</a
+        ><span
+          aria-hidden="true"
+          class="pointer-events-none absolute right-0 top-full mt-4 hidden whitespace-nowrap bg-[var(--c-blue)] px-5 py-3.5 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] group-hover:block"
+          >GITHUB.COM/VULIMWA</span
+        ></span
+      ><span class="group relative flex"
+        ><a
+          href="https://www.linkedin.com/in/vulimwa-bravin/"
+          title="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 font-mono text-xs font-semibold text-[var(--ink)] transition-colors group-hover:bg-[var(--c-blue)]"
+          >LI</a
+        ><span
+          aria-hidden="true"
+          class="pointer-events-none absolute right-0 top-full mt-4 hidden whitespace-nowrap bg-[var(--c-blue)] px-5 py-3.5 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] group-hover:block"
+          >IN/VULIMWA-BRAVIN</span
+        ></span
+      ><a
+        href="mailto:vulimwabravin@gmail.com"
+        class="flex items-center gap-2 border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-white"
+        ><svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 21.2S4.6 16.4 2.4 11.6C.9 8.1 3 4.4 6.6 4.4c2 0 3.7 1.1 5.4 3.1 1.7-2 3.4-3.1 5.4-3.1 3.6 0 5.7 3.7 4.2 7.2-2.2 4.8-9.6 9.6-9.6 9.6z"
+          ></path>
+        </svg>
+        CONTACT</a
+      >
+    </div>
+    <button
+      type="button"
+      aria-expanded="false"
+      class="ml-auto flex items-center gap-2.5 self-center border-2 border-[var(--ink)] bg-white px-3.5 py-1.5 font-mono text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-white md:hidden"
+    >
+      MENU<svg
+        width="16"
+        height="12"
+        viewBox="0 0 16 12"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M1 2.5h14M1 9.5h14"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </button>
+  </div>
+  <div
+    class="overflow-hidden border-b border-black/10 bg-white transition-[max-height] duration-300 ease-out md:hidden max-h-0 border-b-0"
+  >
+    <nav aria-label="Mobile">
+      <a
+        class="flex items-center gap-4 px-5 py-4 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] transition-colors hover:bg-[var(--c-cream)]"
+        href="{{HOME_HREF}}"
+        data-nav-key="home"
+        ><span aria-hidden="true" class="flex w-5 justify-center"
+          ><svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 3.2 2.8 10.8h2.6V21h6V14.6h1.2V21h6V10.8h2.6L12 3.2z"
+            ></path></svg></span
+        >HOME</a
+      ><a
+        class="flex items-center gap-4 px-5 py-4 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] transition-colors hover:bg-[var(--c-cream)]"
+        href="{{ABOUT_HREF}}"
+        data-nav-key="about"
+        ><span aria-hidden="true" class="flex w-5 justify-center"
+          ><svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2v20M3.34 7l17.32 10M20.66 7L3.34 17"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+            ></path></svg></span
+        >ABOUT</a
+      ><a
+        class="flex items-center gap-4 px-5 py-4 font-mono text-sm font-semibold tracking-wide text-[var(--ink)] transition-colors hover:bg-[var(--c-cream)]"
+        href="{{WORK_HREF}}"
+        data-nav-key="work"
+        ><span aria-hidden="true" class="flex w-5 justify-center"
+          ><svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 11.2C8.2 11.2 5.2 8.8 5.2 5.4V3.6h13.6v1.8c0 3.4-3 5.8-6.8 5.8zm0 1.6c3.8 0 6.8 2.4 6.8 5.8v1.8H5.2v-1.8c0-3.4 3-5.8 6.8-5.8z"
+            ></path></svg></span
+        >WORK</a
+      >
+    </nav>
+    <div class="flex items-center justify-end gap-3 px-5 py-4">
+      <a
+        href="mailto:vulimwabravin@gmail.com"
+        title="Email"
+        class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 font-mono text-xs font-semibold text-[var(--ink)]"
+        >EM</a
+      ><a
+        href="https://github.com/Vulimwa"
+        title="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 font-mono text-xs font-semibold text-[var(--ink)]"
+        >GH</a
+      ><a
+        href="https://www.linkedin.com/in/vulimwa-bravin/"
+        title="LinkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 font-mono text-xs font-semibold text-[var(--ink)]"
+        >LI</a
+      >
+    </div>
+  </div>
+</header>

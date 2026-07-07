@@ -1,0 +1,1206 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/includes.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#161616",
+            },
+            fontFamily: {
+              hand: ['"Caveat"', "cursive"],
+              pixel: ['"Press Start 2P"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="canvas-grid min-h-screen text-[var(--ink)]">
+      <div data-include="includes/navbar.html"></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none fixed left-0 top-0 z-[9990] opacity-0 transition-opacity duration-300"
+        style="
+          mix-blend-mode: difference;
+          transform: translate3d(991px, 208px, 0px);
+          opacity: 1;
+        "
+      >
+        <span
+          class="absolute -left-2 -top-2 block h-3 w-3 rounded-full bg-white"
+        ></span
+        ><span
+          class="block rounded-full rounded-tl-none bg-white px-2.5 py-1 font-mono text-[11px] font-semibold text-black"
+          >YOU</span
+        >
+      </div>
+      <nav
+        aria-label="About sections"
+        class="fixed left-6 top-1/2 z-[95] hidden -translate-y-1/2 flex-col gap-4 rounded-[24px] bg-white px-2.5 py-5 shadow-[0_10px_40px_rgba(0,0,0,0.14)] xl:flex"
+      >
+        <a
+          href="#bio"
+          class="flex flex-col items-center gap-1.5 rounded-2xl px-3 pb-2 pt-3 transition-colors bg-[var(--ink)] text-white [--rail-bg:var(--ink)]"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <circle cx="19.2" cy="12" r="2.6"></circle>
+            <circle
+              cx="17.091168824543143"
+              cy="17.091168824543143"
+              r="2.6"
+            ></circle>
+            <circle cx="12" cy="19.2" r="2.6"></circle>
+            <circle
+              cx="6.908831175456858"
+              cy="17.091168824543143"
+              r="2.6"
+            ></circle>
+            <circle cx="4.8" cy="12" r="2.6"></circle>
+            <circle
+              cx="6.908831175456856"
+              cy="6.908831175456858"
+              r="2.6"
+            ></circle>
+            <circle cx="11.999999999999998" cy="4.8" r="2.6"></circle>
+            <circle
+              cx="17.09116882454314"
+              cy="6.908831175456856"
+              r="2.6"
+            ></circle>
+            <circle cx="12" cy="12" r="7"></circle>
+            <circle
+              cx="12"
+              cy="12"
+              r="3"
+              fill="var(--rail-bg, #fff)"
+            ></circle></svg
+          ><span class="font-mono text-[11px] font-bold tracking-[0.06em]"
+            >BIO</span
+          ></a
+        ><a
+          href="#story"
+          class="flex flex-col items-center gap-1.5 rounded-2xl px-3 pb-2 pt-3 transition-colors text-[var(--ink)] hover:bg-gray-100 [--rail-bg:#fff]"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <rect x="3.5" y="3.5" width="9.5" height="9.5" rx="3"></rect>
+            <rect x="11" y="11" width="9.5" height="9.5" rx="3"></rect></svg
+          ><span class="font-mono text-[11px] font-bold tracking-[0.06em]"
+            >STORY</span
+          ></a
+        ><a
+          href="#work"
+          class="flex flex-col items-center gap-1.5 rounded-2xl px-3 pb-2 pt-3 transition-colors text-[var(--ink)] hover:bg-gray-100 [--rail-bg:#fff]"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+            <path
+              d="M12 4.6c1 4.9 2.5 6.4 7.4 7.4-4.9 1-6.4 2.5-7.4 7.4-1-4.9-2.5-6.4-7.4-7.4 4.9-1 6.4-2.5 7.4-7.4z"
+              fill="var(--rail-bg, #fff)"
+            ></path></svg
+          ><span class="font-mono text-[11px] font-bold tracking-[0.06em]"
+            >WORK</span
+          ></a
+        >
+      </nav>
+      <div class="pt-[64px]">
+        <div
+          aria-hidden="true"
+          class="relative h-9 select-none overflow-hidden border-b border-black/10 bg-white sticky top-[64px] z-[90]"
+        >
+          <div
+            class="flex h-full will-change-transform"
+            data-auto-grid
+            data-item-width="130"
+            data-step="100"
+            style="transform: translate3d(0px, 0px, 0px)"
+          ></div>
+        </div>
+        <main>
+          <div class="mx-auto max-w-4xl px-5 pb-14 pt-16 sm:px-8 sm:pt-20">
+            <h1
+              class="font-pixel text-[clamp(3.2rem,10vw,7rem)] font-extrabold leading-none tracking-tight text-[var(--ink)]"
+            >
+              ABOUT
+            </h1>
+          </div>
+          <section id="bio" class="scroll-mt-28 px-5 sm:px-8">
+            <div class="mx-auto max-w-4xl">
+              <p
+                class="mb-3 inline-block px-3 py-1 font-mono text-xs font-semibold tracking-[0.14em]"
+                style="background: var(--c-yellow); color: var(--ink)"
+              >
+                MAIN BIO
+              </p>
+              <div
+                class="relative bg-transparent"
+                style="box-shadow: 0 0 0 1px var(--c-yellow)"
+              >
+                <div class="px-6 py-10 sm:px-12 sm:py-14">
+                  <h2
+                    class="text-3xl font-semibold leading-tight tracking-tight text-[var(--ink)] sm:text-[2.5rem]"
+                  >
+                    I'm Bravin
+                    <span
+                      class="relative mx-1 inline-block h-[1.05em] w-[1.35em] overflow-hidden rounded-md align-[-4px]"
+                      ><span class="image-container-2">
+                        <img
+                          src="/assets/bravin.jpg"
+                          alt="Bravin"
+                          class="responsive-img"
+                        />
+                      </span>
+                    </span>
+                    a Data Scientist and Urban & Regional Planner in Kenya who
+                    enjoys transforming complex data into
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      aria-hidden="true"
+                      class="inline-block align-[-4px]"
+                    >
+                      <ellipse
+                        cx="15"
+                        cy="8"
+                        rx="4.5"
+                        ry="7"
+                        fill="var(--c-yellow)"
+                        transform="rotate(0 15 15)"
+                      ></ellipse>
+                      <ellipse
+                        cx="15"
+                        cy="8"
+                        rx="4.5"
+                        ry="7"
+                        fill="var(--c-yellow)"
+                        transform="rotate(90 15 15)"
+                      ></ellipse>
+                      <ellipse
+                        cx="15"
+                        cy="8"
+                        rx="4.5"
+                        ry="7"
+                        fill="var(--c-yellow)"
+                        transform="rotate(180 15 15)"
+                      ></ellipse>
+                      <ellipse
+                        cx="15"
+                        cy="8"
+                        rx="4.5"
+                        ry="7"
+                        fill="var(--c-yellow)"
+                        transform="rotate(270 15 15)"
+                      ></ellipse>
+                    </svg>
+                    meaningful insights that drive better decisions
+                    <svg
+                      width="26"
+                      height="26"
+                      viewBox="0 0 24 24"
+                      fill="var(--c-pink)"
+                      aria-hidden="true"
+                      class="inline-block align-[-3px]"
+                    >
+                      <path
+                        d="M12 11.2C8.2 11.2 5.2 8.8 5.2 5.4V3.6h13.6v1.8c0 3.4-3 5.8-6.8 5.8zm0 1.6c3.8 0 6.8 2.4 6.8 5.8v1.8H5.2v-1.8c0-3.4 3-5.8 6.8-5.8z"
+                      ></path></svg
+                    >.
+                  </h2>
+                  <div
+                    class="mt-8 max-w-2xl space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+                  >
+                    <p>
+                      I spend my time exploring data, building machine learning
+                      models, developing interactive dashboards, and applying
+                      GIS to solve real-world challenges. Whether it's analyzing
+                      business performance, supporting spatial planning, or
+                      uncovering patterns hidden in data, my goal is to create
+                      solutions that are practical, reliable, and impactful for
+                      the people who depend on them.
+                    </p>
+                    <p>
+                      Through academic projects, professional certifications,
+                      and continuous learning, I've worked with diverse datasets
+                      across business, environmental, and urban planning
+                      domains. From cleaning and modeling data to designing
+                      business intelligence dashboards and spatial
+                      decision-support tools, I've developed solutions that
+                      combine analytical thinking with real-world
+                      problem-solving.
+                    </p>
+                  </div>
+                  <div
+                    class="mt-10 flex flex-col gap-10 md:flex-row md:items-start"
+                  >
+                    <div class="flex max-w-md flex-col gap-6">
+                      <div
+                        class="bg-[var(--c-cream)] px-6 py-5 text-[15px] font-medium leading-relaxed text-[var(--ink)]"
+                      >
+                        Currently, I'm advancing my expertise through the ALX
+                        Data Science program while building a portfolio of
+                        projects in machine learning, business intelligence,
+                        GIS, and data analytics. My background in Urban &
+                        Regional Planning gives me a unique perspective on
+                        understanding complex systems and using data to support
+                        sustainable development and informed decision-making.
+                      </div>
+                      <div
+                        class="max-w-[21rem] rotate-2 self-end translate-x-2 md:translate-x-6 bg-[var(--c-cream)] px-6 py-5 text-[15px] font-medium leading-relaxed text-[var(--ink)] shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
+                      >
+                        When I'm not working with data, you'll usually find me
+                        exploring new analytical techniques, learning emerging
+                        technologies, or thinking about how data can be used to
+                        solve the next meaningful challenge.
+                      </div>
+                    </div>
+                    <div class="relative self-center md:self-start">
+                      <div
+                        aria-hidden="true"
+                        class="inline-flex flex-col items-start absolute -top-9 right-0 z-10 translate-x-1/4"
+                      >
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          class="-mb-1"
+                        >
+                          <path
+                            d="M4 2l6 17 3-7 7-3L4 2z"
+                            fill="var(--c-yellow)"
+                            stroke="var(--ink)"
+                            stroke-width="1.6"
+                          ></path></svg
+                        ><span
+                          class="rounded-full rounded-tl-none border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="background: var(--c-yellow); color: var(--ink)"
+                          >BRAVIN VULMWA</span
+                        >
+                      </div>
+                      <div
+                        class="w-56 rotate-2 bg-white p-3 pb-9 shadow-[0_10px_36px_rgba(0,0,0,0.16)]"
+                      >
+                        <div
+                          class="relative aspect-square w-full overflow-hidden"
+                        >
+                          <div
+                            class="relative aspect-square w-full overflow-hidden"
+                          >
+                            <img
+                              alt="Portrait of Bravin"
+                              src="/assets/bravin.jpg"
+                              class="object-cover"
+                              style="
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                inset: 0px;
+                                object-fit: cover;
+                                color: transparent;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <p
+                          class="mt-2 text-center font-hand text-xl text-[var(--ink)]"
+                        >
+                          it's me
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    left: -6px;
+                    border: 1.5px solid var(--c-yellow);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    right: -6px;
+                    border: 1.5px solid var(--c-yellow);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    left: -6px;
+                    border: 1.5px solid var(--c-yellow);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    right: -6px;
+                    border: 1.5px solid var(--c-yellow);
+                  "
+                ></span>
+              </div>
+            </div>
+          </section>
+          <section id="story" class="scroll-mt-28 px-5 pt-24 sm:px-8">
+            <div class="mx-auto max-w-4xl">
+              <p
+                class="mb-3 inline-block px-3 py-1 font-mono text-xs font-semibold tracking-[0.14em]"
+                style="background: var(--c-pink); color: white"
+              >
+                HOW I WORK
+              </p>
+              <div
+                class="relative bg-transparent"
+                style="box-shadow: 0 0 0 1px var(--c-pink)"
+              >
+                <div
+                  class="relative flex flex-col gap-14 px-6 py-12 sm:px-12 sm:py-16"
+                >
+                  <div class="flex flex-col items-start">
+                    <div
+                      class="relative max-w-xl px-7 py-7 sm:px-9"
+                      style="background: rgb(181, 221, 240)"
+                    >
+                      <h3
+                        class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                      >
+                        Starting with the question, not the data
+                      </h3>
+                      <p
+                        class="mt-4 text-[15px] leading-relaxed text-[var(--ink)]/90"
+                      >
+                        Before analyzing a dataset, I want to understand the
+                        problem we're trying to solve. Good analysis begins with
+                        asking the right questions, identifying the real
+                        objective, and choosing the most meaningful approach.
+                        The best insights come from understanding the context
+                        before opening the data.
+                      </p>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="mt-4 hidden items-center gap-3 lg:flex self-end"
+                    >
+                      <svg
+                        width="90"
+                        height="34"
+                        viewBox="0 0 90 34"
+                        fill="none"
+                        aria-hidden="true"
+                        class=" "
+                      >
+                        <path
+                          d="M4 8c26 14 52 18 76 14"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        ></path>
+                        <path
+                          d="M70 14l12 7-14 4"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                      ><span
+                        class="whitespace-nowrap font-hand text-2xl text-[var(--ink)]"
+                        >ask first, analyze second.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end">
+                    <div
+                      class="relative max-w-xl px-7 py-7 sm:px-9"
+                      style="background: var(--c-cream)"
+                    >
+                      <h3
+                        class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                      >
+                        Turning data into decisions
+                      </h3>
+                      <p
+                        class="mt-4 text-[15px] leading-relaxed text-[var(--ink)]/90"
+                      >
+                        Data is only valuable when it leads to action. I focus
+                        on transforming raw, messy information into clear
+                        insights through analytics, machine learning, GIS, and
+                        visualization, helping organizations make confident,
+                        evidence-based decisions.
+                      </p>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="mt-4 hidden items-center gap-3 lg:flex flex-row-reverse self-start"
+                    >
+                      <svg
+                        width="90"
+                        height="34"
+                        viewBox="0 0 90 34"
+                        fill="none"
+                        aria-hidden="true"
+                        class="-scale-x-100"
+                      >
+                        <path
+                          d="M4 8c26 14 52 18 76 14"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        ></path>
+                        <path
+                          d="M70 14l12 7-14 4"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                      ><span
+                        class="whitespace-nowrap font-hand text-2xl text-[var(--ink)]"
+                        >insights over information.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <div
+                      class="relative max-w-xl px-7 py-7 sm:px-9"
+                      style="background: var(--c-mint)"
+                    >
+                      <h3
+                        class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                      >
+                        Collaboration drives better outcomes
+                      </h3>
+                      <p
+                        class="mt-4 text-[15px] leading-relaxed text-[var(--ink)]/90"
+                      >
+                        Great solutions come from working with people who
+                        understand the problem from different perspectives. I
+                        enjoy collaborating with stakeholders, domain experts,
+                        and teams to build solutions that are technically sound,
+                        practical, and aligned with real-world needs.
+                      </p>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="mt-4 hidden items-center gap-3 lg:flex self-end"
+                    >
+                      <svg
+                        width="90"
+                        height="34"
+                        viewBox="0 0 90 34"
+                        fill="none"
+                        aria-hidden="true"
+                        class=" "
+                      >
+                        <path
+                          d="M4 8c26 14 52 18 76 14"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        ></path>
+                        <path
+                          d="M70 14l12 7-14 4"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                      ><span
+                        class="whitespace-nowrap font-hand text-2xl text-[var(--ink)]"
+                        >better together.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end">
+                    <div
+                      class="relative max-w-xl px-7 py-7 sm:px-9"
+                      style="background: rgb(242, 191, 205)"
+                    >
+                      <h3
+                        class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                      >
+                        Details create confidence
+                      </h3>
+                      <p
+                        class="mt-4 text-[15px] leading-relaxed text-[var(--ink)]/90"
+                      >
+                        Reliable data products are built on careful attention to
+                        detail—from data quality and cleaning to model
+                        validation and dashboard design. Small details improve
+                        accuracy, build trust, and ensure the insights people
+                        rely on are dependable.
+                      </p>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="mt-4 hidden items-center gap-3 lg:flex flex-row-reverse self-start"
+                    >
+                      <svg
+                        width="90"
+                        height="34"
+                        viewBox="0 0 90 34"
+                        fill="none"
+                        aria-hidden="true"
+                        class="-scale-x-100"
+                      >
+                        <path
+                          d="M4 8c26 14 52 18 76 14"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        ></path>
+                        <path
+                          d="M70 14l12 7-14 4"
+                          stroke="var(--ink)"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                      ><span
+                        class="whitespace-nowrap font-hand text-2xl text-[var(--ink)]"
+                        >quality builds trust.</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="inline-flex flex-col items-start absolute -right-4 top-[46%] z-10 hidden lg:inline-flex"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      class="-mb-1"
+                    >
+                      <path
+                        d="M4 2l6 17 3-7 7-3L4 2z"
+                        fill="var(--c-pink)"
+                        stroke="var(--ink)"
+                        stroke-width="1.6"
+                      ></path></svg
+                    ><span
+                      class="rounded-full rounded-tl-none border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-xs font-semibold tracking-[0.12em]"
+                      style="background: var(--c-pink); color: white"
+                      >MY STORY</span
+                    >
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    left: -6px;
+                    border: 1.5px solid var(--c-pink);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    right: -6px;
+                    border: 1.5px solid var(--c-pink);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    left: -6px;
+                    border: 1.5px solid var(--c-pink);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    right: -6px;
+                    border: 1.5px solid var(--c-pink);
+                  "
+                ></span>
+              </div>
+            </div>
+          </section>
+          <div id="work" class="scroll-mt-28 pt-24">
+            <section class="px-5 pb-28 pt-4 sm:px-8">
+              <div class="mx-auto max-w-4xl">
+                <p
+                  class="mb-3 inline-block bg-[var(--c-blue)] px-3 py-1 font-mono text-xs font-semibold tracking-[0.14em] text-[var(--ink)]"
+                >
+                  DIVE INTO MY WORK
+                </p>
+                <div
+                  class="relative bg-white"
+                  style="box-shadow: 0 0 0 1px var(--c-blue)"
+                >
+                  <div class="px-6 py-10 sm:px-12 sm:py-12">
+                    <h2 class="text-2xl text-gray-400">Timeline</h2>
+                    <hr class="mt-4 border-black/10" />
+                    <div class="flex gap-5 py-8">
+                      <span
+                        aria-hidden="true"
+                        class="mt-1.5 flex h-8 w-8 flex-shrink-0 rotate-45 flex-wrap gap-1 p-1"
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-blue)"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-blue); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-blue); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-blue)"
+                        ></span
+                      ></span>
+                      <div>
+                        <h3
+                          class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                        >
+                          <a
+                            href="https://www.alxafrica.com/alx-data-science"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:underline"
+                            >ALX Data Science Program</a
+                          >
+                        </h3>
+                        <p
+                          class="mt-1 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          DATA SCIENCE LEARNER
+                        </p>
+                        <p
+                          class="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink)]/80 sm:text-base"
+                        >
+                          Building practical expertise in Python, SQL, machine learning, data engineering fundamentals, and applied analytics through hands-on projects focused on solving real-world problems.
+                        </p>
+                        <span
+                          class="mt-5 inline-flex items-center gap-2 border-2 border-[var(--ink)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] text-[var(--ink)] bg-[var(--c-blue)]/40"
+                          ><span aria-hidden="true">⚡</span>JAN 2025 – PRESENT</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex gap-5 py-8 border-t border-black/10">
+                      <span
+                        aria-hidden="true"
+                        class="mt-1.5 flex h-8 w-8 flex-shrink-0 rotate-45 flex-wrap gap-1 p-1"
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-yellow)"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-yellow); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-yellow); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-yellow)"
+                        ></span
+                      ></span>
+                      <div>
+                        <h3
+                          class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                        >
+                          Migori Local Physical & Land Use Development Plan
+                        </h3>
+                        <p
+                          class="mt-1 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          GIS & SPATIAL PLANNING
+                        </p>
+                        <p
+                          class="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink)]/80 sm:text-base"
+                        >
+                          Contributed to the development of a Local Physical and Land Use Development Plan through spatial analysis, field data collection, land use assessment, and evidence-based planning to support sustainable urban development.
+                        </p>
+                        <span
+                          class="mt-5 inline-flex items-center gap-2 border-2 border-[var(--ink)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] text-[var(--ink)] bg-white"
+                          ><span aria-hidden="true">❖</span>2026</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex gap-5 py-8 border-t border-black/10">
+                      <span
+                        aria-hidden="true"
+                        class="mt-1.5 flex h-8 w-8 flex-shrink-0 rotate-45 flex-wrap gap-1 p-1"
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-pink)"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-pink); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-pink); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-pink)"
+                        ></span
+                      ></span>
+                      <div>
+                        <h3
+                          class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                        >
+                          Economic Profiling Dashboard
+                        </h3>
+                        <p
+                          class="mt-1 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          DATA ANALYTICS & BUSINESS INTELLIGENCE
+                        </p>
+                        <p
+                          class="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink)]/80 sm:text-base"
+                        >
+                          Analyzed business survey data using SQL and Power BI to develop an interactive dashboard revealing enterprise characteristics, employment trends, business diversity, and economic insights for planning and decision-making.
+                        </p>
+                        <span
+                          class="mt-5 inline-flex items-center gap-2 border-2 border-[var(--ink)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] text-[var(--ink)] bg-white"
+                          ><span aria-hidden="true">❖</span>2026</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex gap-5 py-8 border-t border-black/10">
+                      <span
+                        aria-hidden="true"
+                        class="mt-1.5 flex h-8 w-8 flex-shrink-0 rotate-45 flex-wrap gap-1 p-1"
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-green)"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-green); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-green); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-green)"
+                        ></span
+                      ></span>
+                      <div>
+                        <h3
+                          class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                        >
+                          Air Quality Predictive Analytics
+                        </h3>
+                        <p
+                          class="mt-1 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          DATA SCIENCE & MACHINE LEARNING
+                        </p>
+                        <p
+                          class="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink)]/80 sm:text-base"
+                        >
+                          Performed exploratory data analysis and developed predictive machine learning models in Python to identify environmental trends and demonstrate practical applications of data science.
+                        </p>
+                        <span
+                          class="mt-5 inline-flex items-center gap-2 border-2 border-[var(--ink)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] text-[var(--ink)] bg-white"
+                          ><span aria-hidden="true">❖</span>2026</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex gap-5 py-8 border-t border-black/10">
+                      <span
+                        aria-hidden="true"
+                        class="mt-1.5 flex h-8 w-8 flex-shrink-0 rotate-45 flex-wrap gap-1 p-1"
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-brown)"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-brown); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-brown); opacity: 0.65"
+                        ></span
+                        ><span
+                          class="h-2.5 w-2.5"
+                          style="background: var(--c-brown)"
+                        ></span
+                      ></span>
+                      <div>
+                        <h3
+                          class="text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl"
+                        >
+                          Sales Performance Intelligence Dashboard
+                        </h3>
+                        <p
+                          class="mt-1 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          BUSINESS INTELLIGENCE & DATA ANALYTICS
+                        </p>
+                        <p
+                          class="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink)]/80 sm:text-base"
+                        >
+                          Built an interactive Power BI dashboard powered by SQL to analyze sales performance, customer behavior, and product trends, supporting data-driven business decisions.
+                        </p>
+                        <span
+                          class="mt-5 inline-flex items-center gap-2 border-2 border-[var(--ink)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] text-[var(--ink)] bg-white"
+                          ><span aria-hidden="true">❖</span>2026</span
+                        >
+                      </div>
+                    </div>
+                    <h2 class="mt-6 text-2xl text-gray-400">Stack</h2>
+                    <hr class="mt-4 border-black/10" />
+                    <dl class="mt-6 space-y-4">
+                      <div
+                        class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6"
+                      >
+                        <dt
+                          class="w-28 flex-shrink-0 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          PROGRAMMING
+                        </dt>
+                        <dd class="flex flex-wrap gap-2">
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Python</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >SQL</span
+                          >
+                        </dd>
+                      </div>
+                      <div
+                        class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6"
+                      >
+                        <dt
+                          class="w-28 flex-shrink-0 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          DATA
+                        </dt>
+                        <dd class="flex flex-wrap gap-2">
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >EXCEL</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Google Sheets</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Power BI</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Tableau</span
+                          >
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >DataBricks</span
+                          >
+                        </dd>
+                      </div>
+                      <div
+                        class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6"
+                      >
+                        <dt
+                          class="w-28 flex-shrink-0 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          DATABASES
+                        </dt>
+                        <dd class="flex flex-wrap gap-2">
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >PostgreSQL</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >MYSQL</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >BigQuery</span
+                          >
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >MongoDB</span
+                        </dd>
+                      </div>
+                      <div
+                        class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6"
+                      >
+                        <dt
+                          class="w-28 flex-shrink-0 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          DATA SCIENCE
+                        </dt>
+                        <dd class="flex flex-wrap gap-2">
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Pandas</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Statistics</span
+                          >
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Machine Learning</span
+                          >
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Scikit-learn</span
+                          >
+                        </dd>
+                      </div>
+                      <div
+                        class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6"
+                      >
+                        <dt
+                          class="w-28 flex-shrink-0 font-mono text-xs font-semibold tracking-[0.14em] text-gray-400"
+                        >
+                          GIS
+                        </dt>
+                        <dd class="flex flex-wrap gap-2">
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >ArcGIS Pro</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >QGIS</span
+                          ><span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >ArcGIS Online</span
+                          >
+                          <span
+                            class="border border-[var(--ink)]/25 bg-[var(--canvas)] px-2.5 py-1 font-mono text-xs text-[var(--ink)]"
+                            >Experience Builder</span
+                          >
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                    style="
+                      top: -6px;
+                      left: -6px;
+                      border: 1.5px solid var(--c-blue);
+                    "
+                  ></span
+                  ><span
+                    aria-hidden="true"
+                    class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                    style="
+                      top: -6px;
+                      right: -6px;
+                      border: 1.5px solid var(--c-blue);
+                    "
+                  ></span
+                  ><span
+                    aria-hidden="true"
+                    class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                    style="
+                      bottom: -6px;
+                      left: -6px;
+                      border: 1.5px solid var(--c-blue);
+                    "
+                  ></span
+                  ><span
+                    aria-hidden="true"
+                    class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                    style="
+                      bottom: -6px;
+                      right: -6px;
+                      border: 1.5px solid var(--c-blue);
+                    "
+                  ></span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section id="contact" class="scroll-mt-24 px-5 pb-28 pt-8 sm:px-8">
+            <div
+              class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.1fr_1fr]"
+            >
+              <div class="flex justify-center">
+                <div class="relative overflow-hidden p-6">
+                  <div class="-rotate-3">
+                    <svg
+                      viewBox="0 0 300 300"
+                      fill="none"
+                      aria-hidden="true"
+                      class="w-72 animate-wiggle sm:w-[28rem]"
+                    >
+                      <path
+                        data-hide-cursor="true"
+                        d="M148 73C128 34 62 26 58 88c-2 34 14 50 30 54-33 8-48 48-26 78 26 32 70 20 96-18 20 38 68 50 84 8 12-32-10-62-26-76 32-16 36-64 8-86-28-22-62-8-76 25z"
+                        fill="var(--c-green)"
+                        stroke="var(--ink)"
+                        stroke-width="2.2"
+                        stroke-linejoin="round"
+                      ></path>
+                      <g
+                        data-hide-cursor="true"
+                        style="transition: transform 0.25s ease-out"
+                      >
+                        <rect
+                          x="163"
+                          y="88"
+                          width="14"
+                          height="36"
+                          rx="7"
+                          fill="var(--ink)"
+                          transform="rotate(4 170 106)"
+                        ></rect>
+                        <rect
+                          x="188"
+                          y="83"
+                          width="14"
+                          height="41"
+                          rx="7"
+                          fill="var(--ink)"
+                          transform="rotate(6 195 103)"
+                        ></rect>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none absolute inset-0 z-10 bg-[#0d0d0d] opacity-0 transition-opacity duration-200"
+                    style="clip-path: inset(0px 100% 100% 0px)"
+                  >
+                    <div class="p-6">
+                      <div class="-rotate-3">
+                        <svg
+                          viewBox="0 0 300 300"
+                          fill="none"
+                          aria-hidden="true"
+                          class="w-72 animate-wiggle sm:w-[28rem]"
+                        >
+                          <path
+                            data-hide-cursor="true"
+                            d="M148 73C128 34 62 26 58 88c-2 34 14 50 30 54-33 8-48 48-26 78 26 32 70 20 96-18 20 38 68 50 84 8 12-32-10-62-26-76 32-16 36-64 8-86-28-22-62-8-76 25z"
+                            fill="#a94e7e"
+                            stroke="#f5f2ea"
+                            stroke-width="2.2"
+                            stroke-linejoin="round"
+                          ></path>
+                          <g
+                            data-hide-cursor="true"
+                            style="transition: transform 0.25s ease-out"
+                          >
+                            <rect
+                              x="163"
+                              y="88"
+                              width="14"
+                              height="36"
+                              rx="7"
+                              fill="#f0ece3"
+                              transform="rotate(4 170 106)"
+                            ></rect>
+                            <rect
+                              x="188"
+                              y="83"
+                              width="14"
+                              height="41"
+                              rx="7"
+                              fill="#f0ece3"
+                              transform="rotate(6 195 103)"
+                            ></rect>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none absolute left-0 top-0 z-10 opacity-0 transition-opacity duration-200"
+                  >
+                    <span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2
+                  class="whitespace-nowrap font-pixel text-[clamp(1.5rem,6vw,3rem)] font-bold leading-none tracking-wide text-[var(--ink)]"
+                >
+                  LET'S&nbsp;&nbsp;TALK
+                </h2>
+                <p
+                  class="mt-7 max-w-lg text-lg leading-relaxed text-[var(--ink)] sm:text-xl"
+                >
+                  Open to new opportunities. I'm passionate about solving
+                  real-world problems through data science, analytics, GIS, and
+                  business intelligence: Building solutions that help
+                  organizations make smarter, data-driven decisions. Email is
+                  the fastest way to reach me.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <div data-include="includes/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="" async defer></script>
+  </body>
+</html>

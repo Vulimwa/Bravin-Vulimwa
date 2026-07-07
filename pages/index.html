@@ -1,0 +1,1564 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/includes.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#161616",
+            },
+            fontFamily: {
+              hand: ['"Caveat"', "cursive"],
+              pixel: ['"Press Start 2P"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body>
+    <div class="canvas-grid min-h-screen text-[var(--ink)]">
+      <div data-include="includes/navbar.html"></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none fixed left-0 top-0 z-[9990] opacity-0 transition-opacity duration-300"
+        style="
+          mix-blend-mode: difference;
+          transform: translate3d(981px, 364px, 0px);
+          opacity: 1;
+        "
+      >
+        <span
+          class="absolute -left-2 -top-2 block h-3 w-3 rounded-full bg-white"
+        ></span
+        ><span
+          class="block rounded-full rounded-tl-none bg-white px-2.5 py-1 font-mono text-[11px] font-semibold text-black"
+          >YOU</span
+        >
+      </div>
+      <div class="pt-[64px]">
+        <div
+          aria-hidden="true"
+          class="relative h-9 select-none overflow-hidden border-b border-black/10 bg-white sticky top-[64px] z-[90]"
+        >
+          <div
+            class="flex h-full will-change-transform"
+            data-auto-grid
+            data-item-width="130"
+            data-step="100"
+            style="transform: translate3d(0px, 0px, 0px)"
+          ></div>
+        </div>
+        <main>
+          <section class="relative overflow-hidden px-5 pb-20 pt-8 sm:px-8">
+            <div class="flex justify-center">
+              <span
+                class="select-none font-mono text-sm tabular-nums tracking-[0.2em] text-[var(--ink)]"
+                aria-label="Current time in Kenya"
+                >13:46:55<span class="ml-1 not-italic opacity-60"
+                  >EAT</span
+                ></span
+              >
+            </div>
+            <div
+              class="relative mx-auto mt-16 flex max-w-4xl flex-col items-center sm:mt-20"
+            >
+              <div class="flex flex-col items-center">
+                <p class="font-hand text-2xl text-[var(--ink)] sm:text-3xl">
+                  my name is
+                </p>
+                <svg
+                  width="150"
+                  height="18"
+                  viewBox="0 0 150 18"
+                  fill="none"
+                  aria-hidden="true"
+                  class="-mt-0.5"
+                >
+                  <path
+                    d="M6 5c34-3.5 72-4 138-1.5"
+                    stroke="var(--ink)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M24 11c26-2 54-2.4 102-1.2"
+                    stroke="var(--ink)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M38 16c18-1.4 38-1.6 74-0.8"
+                    stroke="var(--ink)"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+              </div>
+              <div class="relative mt-6">
+                <span
+                  class="absolute -top-8 left-0 z-20 -translate-x-[6%] -rotate-6 whitespace-nowrap border border-black/10 bg-[var(--c-mint)] px-2.5 py-1.5 text-[10px] font-medium text-[var(--ink)] shadow-[0_2px_10px_rgba(0,0,0,0.12)] sm:-top-10 sm:px-5 sm:py-3 sm:text-sm"
+                  >Urban and Regional Planning</span
+                ><span
+                  class="absolute -top-6 right-0 z-20 translate-x-[4%] rotate-3 whitespace-nowrap border border-black/10 bg-[var(--c-cream)] px-2.5 py-1.5 text-[10px] font-medium text-[var(--ink)] shadow-[0_2px_10px_rgba(0,0,0,0.12)] sm:-top-9 sm:px-5 sm:py-3 sm:text-sm"
+                  >Data Science</span
+                >
+                <div
+                  data-hide-cursor="true"
+                  class="relative -m-3 overflow-hidden p-3"
+                >
+                  <div
+                    class="relative bg-transparent"
+                    style="box-shadow: 0 0 0 1px var(--c-blue)"
+                  >
+                    <h1
+                      class="whitespace-nowrap px-3 py-2 font-pixel text-[clamp(1.6rem,5.6vw,4.6rem)] font-extrabold leading-none tracking-tight sm:px-8 text-[var(--ink)]"
+                    >
+                      BRAVIN VULIMWA
+                    </h1>
+                    <span
+                      aria-hidden="true"
+                      class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                      style="
+                        top: -6px;
+                        left: -6px;
+                        border: 1.5px solid var(--c-blue);
+                      "
+                    ></span
+                    ><span
+                      aria-hidden="true"
+                      class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                      style="
+                        top: -6px;
+                        right: -6px;
+                        border: 1.5px solid var(--c-blue);
+                      "
+                    ></span
+                    ><span
+                      aria-hidden="true"
+                      class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                      style="
+                        bottom: -6px;
+                        left: -6px;
+                        border: 1.5px solid var(--c-blue);
+                      "
+                    ></span
+                    ><span
+                      aria-hidden="true"
+                      class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                      style="
+                        bottom: -6px;
+                        right: -6px;
+                        border: 1.5px solid var(--c-blue);
+                      "
+                    ></span>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none absolute inset-0 z-10 bg-[#0d0d0d] opacity-0 transition-opacity duration-200"
+                    style="
+                      clip-path: inset(50% round 200px);
+                      background-image:
+                        linear-gradient(
+                          rgba(255, 255, 255, 0.07) 1px,
+                          transparent 1px
+                        ),
+                        linear-gradient(
+                          90deg,
+                          rgba(255, 255, 255, 0.07) 1px,
+                          transparent 1px
+                        );
+                      background-size: 170px 170px;
+                      opacity: 1;
+                    "
+                  >
+                    <div class="p-3">
+                      <div
+                        class="relative bg-transparent"
+                        style="box-shadow: rgb(194, 65, 12) 0px 0px 0px 1px"
+                      >
+                        <h1
+                          class="whitespace-nowrap px-3 py-2 font-pixel text-[clamp(1.6rem,5.6vw,4.6rem)] font-extrabold leading-none tracking-tight sm:px-8 text-[#f5f2ea]"
+                        >
+                          BRAVIN VULIMWA
+                        </h1>
+                        <span
+                          aria-hidden="true"
+                          class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                          style="
+                            top: -6px;
+                            left: -6px;
+                            border: 1.5px solid rgb(194, 65, 12);
+                          "
+                        ></span
+                        ><span
+                          aria-hidden="true"
+                          class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                          style="
+                            top: -6px;
+                            right: -6px;
+                            border: 1.5px solid rgb(194, 65, 12);
+                          "
+                        ></span
+                        ><span
+                          aria-hidden="true"
+                          class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                          style="
+                            bottom: -6px;
+                            left: -6px;
+                            border: 1.5px solid rgb(194, 65, 12);
+                          "
+                        ></span
+                        ><span
+                          aria-hidden="true"
+                          class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                          style="
+                            bottom: -6px;
+                            right: -6px;
+                            border: 1.5px solid rgb(194, 65, 12);
+                          "
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none absolute left-0 top-0 z-10 opacity-0 transition-opacity duration-200"
+                    style="opacity: 0"
+                  >
+                    <span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                      style="
+                        transform: translate3d(430.04px, 57.9423px, 0px)
+                          scale(0.412881);
+                      "
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                      style="
+                        transform: translate3d(480.155px, 57.9423px, 0px)
+                          scale(0.412881);
+                      "
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                      style="
+                        transform: translate3d(430.04px, 108.058px, 0px)
+                          scale(0.412881);
+                      "
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                      style="
+                        transform: translate3d(480.155px, 108.058px, 0px)
+                          scale(0.412881);
+                      "
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <p
+                class="mt-7 flex items-center gap-2.5 font-mono text-xs font-semibold tracking-[0.18em] text-[var(--ink)] sm:text-sm"
+              >
+                <span
+                  aria-hidden="true"
+                  class="h-3.5 w-3.5 rounded-full bg-[var(--c-blue)]"
+                ></span
+                >AVAILABLE FOR OPPORTUNITIES
+              </p>
+              <div
+                class="inline-flex flex-col items-end mt-12 animate-pill-b self-end lg:hidden"
+              >
+                <span class="-mb-1 -scale-x-100"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 2l6 17 3-7 7-3L4 2z"
+                      fill="var(--c-pink)"
+                      stroke="var(--ink)"
+                      stroke-width="1.6"
+                    ></path></svg></span
+                ><span
+                  class="rounded-full border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] shadow-[3px_3px_0_rgba(20,20,20,0.9)]"
+                  style="background: var(--c-pink); color: white"
+                  >KENYA · EAT</span
+                >
+              </div>
+              <div
+                class="inline-flex flex-col items-start mt-6 animate-pill-a self-start lg:hidden"
+              >
+                <span class="-mb-1"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 2l6 17 3-7 7-3L4 2z"
+                      fill="var(--c-yellow)"
+                      stroke="var(--ink)"
+                      stroke-width="1.6"
+                    ></path></svg></span
+                ><span
+                  class="rounded-full border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] shadow-[3px_3px_0_rgba(20,20,20,0.9)]"
+                  style="background: var(--c-yellow); color: var(--ink)"
+                  >DATA SCIENTIST | URBAN PLANNER</span
+                >
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="pointer-events-none will-change-transform absolute right-[12%] top-[48%] hidden lg:block"
+              style="
+                transform: translate3d(3.96071px, -41.8491px, 0px)
+                  rotate(7.06123deg);
+              "
+            >
+              <div class="inline-flex flex-col items-end">
+                <span class="-mb-1 -scale-x-100"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 2l6 17 3-7 7-3L4 2z"
+                      fill="var(--c-pink)"
+                      stroke="var(--ink)"
+                      stroke-width="1.6"
+                    ></path></svg></span
+                ><span
+                  class="rounded-full border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] shadow-[3px_3px_0_rgba(20,20,20,0.9)]"
+                  style="background: var(--c-pink); color: white"
+                  >KENYA · EAT</span
+                >
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="pointer-events-none will-change-transform absolute left-[12%] top-[52%] hidden lg:block"
+              style="
+                transform: translate3d(-37.3483px, -19.2135px, 0px)
+                  rotate(-10.5784deg);
+              "
+            >
+              <div class="inline-flex flex-col items-start">
+                <span class="-mb-1"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 2l6 17 3-7 7-3L4 2z"
+                      fill="var(--c-yellow)"
+                      stroke="var(--ink)"
+                      stroke-width="1.6"
+                    ></path></svg></span
+                ><span
+                  class="rounded-full border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] shadow-[3px_3px_0_rgba(20,20,20,0.9)]"
+                  style="background: var(--c-yellow); color: var(--ink)"
+                  >DATA SCIENTIST | URBAN PLANNER</span
+                >
+              </div>
+            </div>
+            <div class="mx-auto mt-16 max-w-2xl text-center sm:mt-20">
+              <p
+                class="text-3xl font-semibold leading-snug tracking-tight text-[var(--ink)] sm:text-4xl"
+              >
+                I help organizations
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  aria-hidden="true"
+                  class="inline-block align-[-4px]"
+                >
+                  <circle
+                    cx="17"
+                    cy="17"
+                    r="14"
+                    stroke="var(--c-green)"
+                    stroke-width="3"
+                  ></circle>
+                  <circle
+                    cx="17"
+                    cy="17"
+                    r="8"
+                    stroke="var(--c-green)"
+                    stroke-width="3"
+                  ></circle>
+                  <circle cx="17" cy="17" r="3" fill="var(--c-green)"></circle>
+                </svg>
+                unlock the value of their data through analytics, machine
+                learning, business intelligence,
+                <span class="whitespace-nowrap"
+                  >GIS
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    aria-hidden="true"
+                    class="animate-roll-360 inline-block align-[-3px]"
+                  >
+                    <g>
+                      <path
+                        d="M15 15L24.2 15"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="24.2"
+                        cy="15"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L21.50538238691624 21.505382386916235"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="21.50538238691624"
+                        cy="21.505382386916235"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L15 24.2"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="15"
+                        cy="24.2"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L8.494617613083765 21.50538238691624"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="8.494617613083765"
+                        cy="21.50538238691624"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L5.800000000000001 15.000000000000002"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="5.800000000000001"
+                        cy="15.000000000000002"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L8.494617613083761 8.494617613083765"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="8.494617613083761"
+                        cy="8.494617613083765"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L14.999999999999998 5.800000000000001"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="14.999999999999998"
+                        cy="5.800000000000001"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g>
+                    <g>
+                      <path
+                        d="M15 15L21.505382386916235 8.494617613083761"
+                        stroke="var(--c-pink)"
+                        stroke-width="1.5"
+                      ></path>
+                      <circle
+                        cx="21.505382386916235"
+                        cy="8.494617613083761"
+                        r="3.5"
+                        fill="var(--c-pink)"
+                      ></circle>
+                    </g></svg
+                  >.</span
+                >
+              </p>
+              <a
+                href="#contact"
+                data-hide-cursor="true"
+                class="group relative mt-10 inline-flex items-center gap-3 bg-[var(--ink)] py-2.5 pl-2.5 pr-7 font-mono text-sm font-semibold tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-[var(--ink)]"
+                ><span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute -inset-3 border border-[var(--ink)] opacity-0 transition-opacity group-hover:opacity-100"
+                  ><span
+                    class="absolute block h-3 w-3 border-2 border-[var(--ink)] bg-white"
+                    style="top: -6px; left: -6px"
+                  ></span
+                  ><span
+                    class="absolute block h-3 w-3 border-2 border-[var(--ink)] bg-white"
+                    style="top: -6px; right: -6px"
+                  ></span
+                  ><span
+                    class="absolute block h-3 w-3 border-2 border-[var(--ink)] bg-white"
+                    style="bottom: -6px; left: -6px"
+                  ></span
+                  ><span
+                    class="absolute block h-3 w-3 border-2 border-[var(--ink)] bg-white"
+                    style="bottom: -6px; right: -6px"
+                  ></span></span
+                ><span
+                  class="flex h-10 w-10 items-center justify-center bg-[var(--c-pink)]"
+                  aria-hidden="true"
+                  ><span
+                    class="h-9 w-9 overflow-hidden rounded-full bg-[var(--c-blue)] text-[var(--ink)]"
+                    ><span class="animate-arrow-through flex h-full w-max"
+                      ><span
+                        class="flex h-full w-9 flex-shrink-0 items-center justify-center"
+                        ><svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M0 0h5l8 9-8 9H0l8-9L0 0z"
+                            fill="currentColor"
+                          ></path>
+                          <path
+                            d="M5 0h5l8 9-8 9H5l8-9L5 0z"
+                            fill="currentColor"
+                          ></path></svg></span
+                      ><span
+                        class="flex h-full w-9 flex-shrink-0 items-center justify-center"
+                        ><svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M0 0h5l8 9-8 9H0l8-9L0 0z"
+                            fill="currentColor"
+                          ></path>
+                          <path
+                            d="M5 0h5l8 9-8 9H5l8-9L5 0z"
+                            fill="currentColor"
+                          ></path></svg></span></span></span></span
+                ><span
+                  class="px-1 transition-colors group-hover:bg-[rgba(95,190,230,0.55)]"
+                  >CONTACT ME</span
+                ></a
+              >
+            </div>
+          </section>
+          <section class="relative overflow-hidden px-5 pb-24 pt-6 sm:px-8">
+            <div aria-hidden="true" class="-mx-5 sm:-mx-8">
+              <svg
+                viewBox="0 0 1440 210"
+                fill="none"
+                class="h-auto w-full"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M-4 192.0Q29.33333333333333 183.3 45.99999999999999 179.0Q62.66666666666666 174.7 79.33333333333333 170.3Q96 166.0 113.33333333333333 164.7Q130.66666666666666 163.3 148 162.0Q165.33333333333331 160.7 182.66666666666666 159.3Q200 158.0 220 154.7Q240 151.3 260 148.0Q280 144.7 300 141.3Q320 138.0 336.66666666666663 138.5Q353.3333333333333 139.0 370 139.5Q386.66666666666663 140.0 403.3333333333333 140.5Q420 141.0 443.33333333333337 136.5Q466.6666666666667 132.0 490 127.5Q513.3333333333334 123.0 536.6666666666667 118.5Q560 114.0 580 114.5Q600 115.0 620 115.5Q640 116.0 660 116.5Q680 117.0 703.3333333333333 112.8Q726.6666666666666 108.7 750 104.5Q773.3333333333334 100.3 796.6666666666667 96.2Q820 92.0 840 92.8Q860 93.7 880 94.5Q900 95.3 920 96.2Q940 97.0 963.3333333333333 93.8Q986.6666666666666 90.7 1010 87.5Q1033.3333333333333 84.3 1056.6666666666665 81.2Q1080 78.0 1100 79.7Q1120 81.3 1140 83.0Q1160 84.7 1180 86.3Q1200 88.0 1221.6666666666665 91.7Q1243.3333333333333 95.3 1265 99.0Q1286.6666666666667 102.7 1308.3333333333335 106.3Q1330 110.0 1349.6666666666665 114.0Q1369.3333333333333 118.0 1389 122.0Q1408.6666666666667 126.0 1428.3333333333335 130.0L1448 134.0"
+                  stroke="#a8a29e"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  opacity="0.85"
+                ></path>
+              </svg>
+            </div>
+            <p
+              class="mt-4 font-hand text-2xl text-[var(--ink)] sm:ml-[12%] sm:text-3xl"
+            >
+              about me!
+            </p>
+            <div class="mx-auto mt-10 flex max-w-3xl flex-col items-center">
+              <div class="relative border border-[var(--ink)] px-6 py-2">
+                <span
+                  aria-hidden="true"
+                  class="absolute block h-2.5 w-2.5 border-[1.5px] border-[var(--ink)] bg-white"
+                  style="top: -5px; left: -5px"
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute block h-2.5 w-2.5 border-[1.5px] border-[var(--ink)] bg-white"
+                  style="top: -5px; right: -5px"
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute block h-2.5 w-2.5 border-[1.5px] border-[var(--ink)] bg-white"
+                  style="bottom: -5px; left: -5px"
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute block h-2.5 w-2.5 border-[1.5px] border-[var(--ink)] bg-white"
+                  style="bottom: -5px; right: -5px"
+                ></span
+                ><span class="text-xl text-[var(--ink)] sm:text-2xl"
+                  >what's up</span
+                >
+              </div>
+              <p
+                class="mt-10 text-center text-2xl font-semibold leading-snug tracking-tight text-[var(--ink)] sm:text-4xl"
+              >
+                I'm Bravin, a Data Scientist and Urban & Regional Planner in
+                Kenya who enjoys turning complex data into practical insights
+                that help organizations make smarter decisions.
+              </p>
+              <div
+                class="mt-14 flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-center"
+              >
+                <div
+                  class="max-w-sm -rotate-2 border border-black/10 bg-[var(--c-cream)] px-6 py-5 text-sm font-medium leading-relaxed text-[var(--ink)] shadow-[0_2px_12px_rgba(0,0,0,0.1)]"
+                >
+                  Most recently: advancing my Data Science journey through ALX,
+                  building machine learning models, analytics solutions, and
+                  data-driven projects using Python, SQL, and modern data tools.
+                </div>
+                <div
+                  class="max-w-sm rotate-2 border border-black/10 bg-[var(--c-mint)] px-6 py-5 text-sm font-medium leading-relaxed text-[var(--ink)] shadow-[0_2px_12px_rgba(0,0,0,0.1)]"
+                >
+                  Alongside that, I apply GIS and spatial analysis to create
+                  interactive dashboards, web mapping applications, data
+                  collection systems, and decision-support solutions for
+                  real-world challenges.
+                </div>
+              </div>
+              <div
+                class="mt-16 flex flex-wrap items-center justify-center gap-4"
+              >
+                <span class="flex items-center gap-4"
+                  ><span
+                    class="px-5 py-3 text-xl font-semibold tracking-tight sm:text-2xl"
+                    style="background: var(--c-yellow); color: var(--ink)"
+                    >Data Science</span
+                  ><span
+                    aria-hidden="true"
+                    class="grid h-[52px] w-[52px] flex-shrink-0 grid-cols-2 place-items-center border-2 border-dashed border-[var(--ink)] p-2"
+                    style="background: var(--c-yellow)"
+                    ><span class="h-3 w-3 rotate-45 bg-[var(--ink)]"></span
+                    ><span class="h-3 w-3 rotate-45 bg-[var(--ink)]"></span
+                    ><span class="h-3 w-3 rotate-45 bg-[var(--ink)]"></span
+                    ><span
+                      class="h-3 w-3 rotate-45 bg-[var(--ink)]"
+                    ></span></span></span
+                ><span class="flex items-center gap-4"
+                  ><span
+                    class="px-5 py-3 text-xl font-semibold tracking-tight sm:text-2xl"
+                    style="background: var(--c-green); color: var(--ink)"
+                    >Machine Learning</span
+                  ></span
+                ><span class="flex items-center gap-4"
+                  ><span
+                    class="px-5 py-3 text-xl font-semibold tracking-tight sm:text-2xl"
+                    style="background: var(--c-pink); color: white"
+                    >GIS & Analytics</span
+                  ><span
+                    aria-hidden="true"
+                    class="grid h-[52px] w-[52px] flex-shrink-0 grid-cols-2 place-items-center border-2 border-dashed border-[var(--ink)] p-2"
+                    style="background: var(--c-pink)"
+                    ><span class="h-3 w-3 rotate-45 bg-[var(--ink)]"></span
+                    ><span class="h-3 w-3 rotate-45 bg-[var(--ink)]"></span
+                    ><span class="h-3 w-3 rotate-45 bg-[var(--ink)]"></span
+                    ><span
+                      class="h-3 w-3 rotate-45 bg-[var(--ink)]"
+                    ></span></span></span
+                ><span class="flex items-center gap-4"
+                  ><span
+                    class="px-5 py-3 text-xl font-semibold tracking-tight sm:text-2xl"
+                    style="background: var(--c-blue); color: var(--ink)"
+                    >Business Intelligence</span
+                  ></span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="px-0 pb-28 pt-6">
+            <div class="flex flex-col items-center px-5 text-center sm:px-8">
+              <p class="font-hand text-2xl text-[var(--ink)] sm:text-3xl">
+                explore my work!
+              </p>
+              <svg
+                width="120"
+                height="14"
+                viewBox="0 0 120 14"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 8c20-6 40 6 58 0s40-6 58 0"
+                  stroke="var(--ink)"
+                  stroke-width="1.6"
+                ></path>
+                <path
+                  d="M14 12c18-5 36 4 52 0s36-5 52 0"
+                  stroke="var(--ink)"
+                  stroke-width="1.2"
+                ></path>
+              </svg>
+              <h2
+                class="mt-8 font-pixel text-[clamp(3rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-tight text-[var(--ink)]"
+                aria-label="FEATURED WORKS"
+              >
+                <span aria-hidden="true" class="block"
+                  ><span data-letter="true" style="opacity: 0">F</span
+                  ><span data-letter="true" style="opacity: 0">E</span
+                  ><span data-letter="true" style="opacity: 0">A</span
+                  ><span data-letter="true" style="opacity: 0">T</span
+                  ><span data-letter="true" style="opacity: 0">U</span
+                  ><span data-letter="true" style="opacity: 0">R</span
+                  ><span data-letter="true" style="opacity: 0">E</span
+                  ><span data-letter="true" style="opacity: 0">D</span></span
+                ><span aria-hidden="true" class="block"
+                  ><span data-letter="true" style="opacity: 0">W</span
+                  ><span data-letter="true" style="opacity: 0">O</span
+                  ><span data-letter="true" style="opacity: 0">R</span
+                  ><span data-letter="true" style="opacity: 0">K</span
+                  ><span data-letter="true" style="opacity: 0">S</span></span
+                >
+              </h2>
+              <p
+                class="mt-8 max-w-md -rotate-1 border border-black/10 bg-[var(--c-cream)] px-7 py-5 text-sm font-medium leading-relaxed text-[var(--ink)] shadow-[0_2px_12px_rgba(0,0,0,0.1)] sm:text-base"
+              >
+                Business intelligence, data science, GIS, and urban planning.
+                Projects that transform data into actionable insights and
+                informed decision-making.
+              </p>
+            </div>
+            <div class="mt-20">
+              <div class="sticky" style="top: 176px; z-index: 1">
+                <div class="relative">
+                  <span
+                    class="folder-tab-mid absolute bottom-full flex h-[52px] items-center justify-center gap-2.5 px-12 pt-1 font-mono text-sm font-semibold tracking-[0.14em]"
+                    style="
+                      background: var(--c-blue);
+                      color: var(--ink);
+                      left: min(0%, 100% - 280px);
+                      min-width: 280px;
+                    "
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 20v-6h5v-5h5V4h6v16z"></path></svg
+                    >PROJECT 01</span
+                  >
+                  <article
+                    class="grid gap-10 px-6 py-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-12 md:px-14 md:py-12"
+                    style="background: var(--c-blue); color: var(--ink)"
+                  >
+                    <div class="flex flex-col" style="opacity: 1">
+                      <p
+                        class="flex items-center gap-2.5 font-mono text-xs font-semibold tracking-[0.16em]"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="h-2.5 w-2.5 rounded-full"
+                          style="background: var(--ink)"
+                        ></span
+                        >DATA ANALYTICS · BUSINESS INTELLIGENCE
+                      </p>
+                      <h3
+                        class="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl"
+                      >
+                        Economic Profiling Dashboard
+                      </h3>
+                      <p
+                        class="mt-4 max-w-md text-base leading-relaxed sm:text-lg"
+                      >
+                        A comprehensive analysis of business survey data from
+                        Migori Town, transforming raw field data into an
+                        interactive Power BI dashboard that reveals business
+                        demographics, employment trends, enterprise
+                        characteristics, and key economic challenges to support
+                        evidence-based planning and investment decisions
+                      </p>
+                      <a
+                        data-hide-cursor="true"
+                        class="group relative mt-8 inline-flex w-fit items-center pb-1 font-mono text-sm font-normal tracking-[0.14em]"
+                        href="/work/1"
+                        ><span
+                          aria-hidden="true"
+                          class="absolute bottom-0 left-0 h-px w-full origin-left transition-transform duration-300 ease-out group-hover:scale-x-[1.06]"
+                          style="background: var(--ink)"
+                        ></span
+                        ><span
+                          class="flex items-center gap-2 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                          >VIEW PROJECT<span aria-hidden="true">↗</span></span
+                        ></a
+                      >
+                      <div class="mt-auto hidden gap-3 pt-10 md:flex">
+                        <span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(22, 22, 22);
+                            color: var(--c-blue);
+                          "
+                          >SQL</span
+                        ><span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(22, 22, 22);
+                            color: var(--c-blue);
+                          "
+                          >POWER BI</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="relative self-center"
+                      style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+                    >
+                      <div
+                        class="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[440px]"
+                      >
+                        <div class="image-container">
+                          <img
+                            alt="Economic screenshot"
+                            loading="lazy"
+                            decoding="async"
+                            class="dashboard-image"
+                            src="/assets/overview_dashboard.png"
+                          />
+                          <span class="badge">Economic Profile</span>
+                        </div>
+                        <span
+                          class="absolute right-4 top-4 flex items-center gap-2 px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.1em]"
+                          style="
+                            background: rgb(22, 22, 22);
+                            color: var(--c-blue);
+                          "
+                          ><span
+                            aria-hidden="true"
+                            class="flex h-4 w-4 items-center justify-center text-[7px] font-bold"
+                            style="
+                              background: var(--c-blue);
+                              color: rgb(22, 22, 22);
+                            "
+                            >JPG</span
+                          >IMAGE.JPG</span
+                        >
+                      </div>
+                      <span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          left: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          right: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          left: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          right: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="sticky" style="top: 176px; z-index: 2">
+                <div class="relative">
+                  <span
+                    class="folder-tab-mid absolute bottom-full flex h-[52px] items-center justify-center gap-2.5 px-12 pt-1 font-mono text-sm font-semibold tracking-[0.14em]"
+                    style="
+                      background: rgb(22, 22, 22);
+                      color: rgb(255, 255, 255);
+                      left: min(22%, 100% - 280px);
+                      min-width: 280px;
+                    "
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 20v-6h5v-5h5V4h6v16z"></path></svg
+                    >PROJECT 02</span
+                  >
+                  <article
+                    class="grid gap-10 px-6 py-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-12 md:px-14 md:py-12"
+                    style="
+                      background: rgb(22, 22, 22);
+                      color: rgb(255, 255, 255);
+                    "
+                  >
+                    <div class="flex flex-col" style="opacity: 1">
+                      <p
+                        class="flex items-center gap-2.5 font-mono text-xs font-semibold tracking-[0.16em]"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="h-2.5 w-2.5 rounded-full"
+                          style="background: rgb(255, 255, 255)"
+                        ></span
+                        >MACHINE LEARNING · DATA SCIENCE
+                      </p>
+                      <h3
+                        class="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl"
+                      >
+                        Air Quality Predictive Analytics
+                      </h3>
+                      <p
+                        class="mt-4 max-w-md text-base leading-relaxed sm:text-lg"
+                      >
+                        Exploratory data analysis and machine learning models
+                        built in Python to uncover air quality patterns and
+                        predict environmental conditions. The project
+                        demonstrates data preprocessing, visualization, feature
+                        engineering, and predictive modeling using real-world
+                        environmental datasets.
+                      </p>
+                      <a
+                        data-hide-cursor="true"
+                        class="group relative mt-8 inline-flex w-fit items-center pb-1 font-mono text-sm font-normal tracking-[0.14em]"
+                        href="/work/2"
+                        ><span
+                          aria-hidden="true"
+                          class="absolute bottom-0 left-0 h-px w-full origin-left transition-transform duration-300 ease-out group-hover:scale-x-[1.06]"
+                          style="background: rgb(255, 255, 255)"
+                        ></span
+                        ><span
+                          class="flex items-center gap-2 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                          >VIEW PROJECT<span aria-hidden="true">↗</span></span
+                        ></a
+                      >
+                      <div class="mt-auto hidden gap-3 pt-10 md:flex">
+                        <span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(255, 255, 255);
+                            color: rgb(22, 22, 22);
+                          "
+                          >Python</span
+                        ><span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(255, 255, 255);
+                            color: rgb(22, 22, 22);
+                          "
+                          >Machine Learning</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="relative self-center"
+                      style="box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px"
+                    >
+                      <div
+                        class="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[440px]"
+                      >
+                        <img
+                            alt="Air Quality screenshot"
+                            loading="lazy"
+                            decoding="async"
+                            class="dashboard-image"
+                            src="/assets/air_quality.png"
+                          />
+                          <span class="badge">Machine Learning</span><span
+                          class="absolute right-4 top-4 flex items-center gap-2 px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.1em]"
+                          style="
+                            background: rgb(255, 255, 255);
+                            color: rgb(22, 22, 22);
+                          "
+                          ><span
+                            aria-hidden="true"
+                            class="flex h-4 w-4 items-center justify-center text-[7px] font-bold"
+                            style="
+                              background: rgb(22, 22, 22);
+                              color: rgb(255, 255, 255);
+                            "
+                            >JPG</span
+                          >IMAGE.JPG</span
+                        >
+                      </div>
+                      <span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          left: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          right: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          left: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          right: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="sticky" style="top: 176px; z-index: 3">
+                <div class="relative">
+                  <span
+                    class="folder-tab-mid absolute bottom-full flex h-[52px] items-center justify-center gap-2.5 px-12 pt-1 font-mono text-sm font-semibold tracking-[0.14em]"
+                    style="
+                      background: var(--c-yellow);
+                      color: var(--ink);
+                      left: min(44%, 100% - 280px);
+                      min-width: 280px;
+                    "
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 20v-6h5v-5h5V4h6v16z"></path></svg
+                    >PROJECT 03</span
+                  >
+                  <article
+                    class="grid gap-10 px-6 py-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-12 md:px-14 md:py-12"
+                    style="background: var(--c-yellow); color: var(--ink)"
+                  >
+                    <div class="flex flex-col" style="opacity: 1">
+                      <p
+                        class="flex items-center gap-2.5 font-mono text-xs font-semibold tracking-[0.16em]"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="h-2.5 w-2.5 rounded-full"
+                          style="background: var(--ink)"
+                        ></span
+                        >BUSINESS INTELLIGENCE · DATA VISUALIZATION
+                      </p>
+                      <h3
+                        class="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl"
+                      >
+                        Sales Performance Intelligence Dashboard
+                      </h3>
+                      <p
+                        class="mt-4 max-w-md text-base leading-relaxed sm:text-lg"
+                      >
+                        An interactive business intelligence dashboard combining
+                        SQL and Power BI to analyze sales performance, customer
+                        purchasing behavior, product trends, and revenue
+                        metrics, enabling data-driven business decision-making.
+                      </p>
+                      <a
+                        data-hide-cursor="true"
+                        class="group relative mt-8 inline-flex w-fit items-center pb-1 font-mono text-sm font-normal tracking-[0.14em]"
+                        href="/work/8"
+                        ><span
+                          aria-hidden="true"
+                          class="absolute bottom-0 left-0 h-px w-full origin-left transition-transform duration-300 ease-out group-hover:scale-x-[1.06]"
+                          style="background: var(--ink)"
+                        ></span
+                        ><span
+                          class="flex items-center gap-2 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                          >VIEW PROJECT<span aria-hidden="true">↗</span></span
+                        ></a
+                      >
+                      <div class="mt-auto hidden gap-3 pt-10 md:flex">
+                        <span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(22, 22, 22);
+                            color: var(--c-yellow);
+                          "
+                          >MYSQL</span
+                        ><span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(22, 22, 22);
+                            color: var(--c-yellow);
+                          "
+                          >POWER BI</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="relative self-center"
+                      style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+                    >
+                      <div
+                        class="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[440px]"
+                      >
+                        <img
+                            alt="Pizza Dashboard screenshot"
+                            loading="lazy"
+                            decoding="async"
+                            class="dashboard-image"
+                            src="/assets/pizza_dashboard_home.jpg"
+                          />
+                          <span class="badge">Business Intelligence</span><span
+                          class="absolute right-4 top-4 flex items-center gap-2 px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.1em]"
+                          style="
+                            background: rgb(22, 22, 22);
+                            color: var(--c-yellow);
+                          "
+                          ><span
+                            aria-hidden="true"
+                            class="flex h-4 w-4 items-center justify-center text-[7px] font-bold"
+                            style="
+                              background: var(--c-yellow);
+                              color: rgb(22, 22, 22);
+                            "
+                            >JPG</span
+                          >IMAGE.JPG</span
+                        >
+                      </div>
+                      <span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          left: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          right: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          left: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          right: -6px;
+                          background: rgb(255, 255, 255);
+                          border: 1.5px solid rgb(22, 22, 22);
+                        "
+                      ></span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="sticky" style="top: 176px; z-index: 4">
+                <div class="relative">
+                  <span
+                    class="folder-tab-mid absolute bottom-full flex h-[52px] items-center justify-center gap-2.5 px-12 pt-1 font-mono text-sm font-semibold tracking-[0.14em]"
+                    style="
+                      background: var(--c-pink);
+                      color: rgb(255, 255, 255);
+                      left: min(66%, 100% - 280px);
+                      min-width: 280px;
+                    "
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 20v-6h5v-5h5V4h6v16z"></path></svg
+                    >PROJECT 04</span
+                  >
+                  <article
+                    class="grid gap-10 px-6 py-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-12 md:px-14 md:py-12"
+                    style="background: var(--c-pink); color: rgb(255, 255, 255)"
+                  >
+                    <div class="flex flex-col">
+                      <p
+                        class="flex items-center gap-2.5 font-mono text-xs font-semibold tracking-[0.16em]"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="h-2.5 w-2.5 rounded-full"
+                          style="background: rgb(255, 255, 255)"
+                        ></span
+                        >SPATIAL PLANNING · GIS
+                      </p>
+                      <h3
+                        class="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl"
+                      >
+                        Migori Town Local Physical & Land Use Development Plan
+                      </h3>
+                      <p
+                        class="mt-4 max-w-md text-base leading-relaxed sm:text-lg"
+                      >
+                        A comprehensive spatial planning project that integrated
+                        GIS analysis, field data collection, land use
+                        assessment, and stakeholder engagement to develop a
+                        sustainable Local Physical and Land Use Development Plan
+                        supporting informed urban growth and infrastructure
+                        planning.
+                      </p>
+                      <a
+                        data-hide-cursor="true"
+                        class="group relative mt-8 inline-flex w-fit items-center pb-1 font-mono text-sm font-normal tracking-[0.14em]"
+                        href="/work/9"
+                        ><span
+                          aria-hidden="true"
+                          class="absolute bottom-0 left-0 h-px w-full origin-left transition-transform duration-300 ease-out group-hover:scale-x-[1.06]"
+                          style="background: rgb(255, 255, 255)"
+                        ></span
+                        ><span
+                          class="flex items-center gap-2 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                          >VIEW PROJECT<span aria-hidden="true">↗</span></span
+                        ></a
+                      >
+                      <div class="mt-auto hidden gap-3 pt-10 md:flex">
+                        <span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(255, 255, 255);
+                            color: var(--c-pink);
+                          "
+                          >ARCGIS</span
+                        ><span
+                          class="folder-chip px-4 pb-2 pt-4 font-mono text-xs font-semibold tracking-[0.12em]"
+                          style="
+                            background: rgb(255, 255, 255);
+                            color: var(--c-pink);
+                          "
+                          >SPATIAL PLANNING</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="relative self-center"
+                      style="box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px"
+                    >
+                      <div
+                        class="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[440px]"
+                      >
+                        <img
+                            alt="Air Quality screenshot"
+                            loading="lazy"
+                            decoding="async"
+                            class="dashboard-image"
+                            src="/assets/migori_lpludp.png"
+                          />
+                          <span class="badge">Spatial Planning</span><span
+                          class="absolute right-4 top-4 flex items-center gap-2 px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.1em]"
+                          style="
+                            background: rgb(255, 255, 255);
+                            color: var(--c-pink);
+                          "
+                          ><span
+                            aria-hidden="true"
+                            class="flex h-4 w-4 items-center justify-center text-[7px] font-bold"
+                            style="
+                              background: var(--c-pink);
+                              color: rgb(255, 255, 255);
+                            "
+                            >JPG</span
+                          >IMAGE.JPG</span
+                        >
+                      </div>
+                      <span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          left: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          top: -6px;
+                          right: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          left: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span
+                      ><span
+                        aria-hidden="true"
+                        class="absolute z-10 block h-[11px] w-[11px]"
+                        style="
+                          bottom: -6px;
+                          right: -6px;
+                          background: rgb(22, 22, 22);
+                          border: 1.5px solid rgb(255, 255, 255);
+                        "
+                      ></span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="mt-14 flex justify-center">
+              <a
+                data-hide-cursor="true"
+                class="group relative inline-flex items-center pb-1 font-mono text-sm font-normal tracking-[0.14em] text-[var(--ink)]"
+                href="/pages/work.html"
+                ><span
+                  aria-hidden="true"
+                  class="absolute bottom-0 left-0 h-px w-full origin-left bg-[var(--ink)] transition-transform duration-300 ease-out group-hover:scale-x-[1.06]"
+                ></span
+                ><span
+                  class="flex items-center gap-2 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                  >ALL WORK<span aria-hidden="true">→</span></span
+                ></a
+              >
+            </div>
+          </section>
+          <section id="contact" class="scroll-mt-24 px-5 pb-28 pt-8 sm:px-8">
+            <div
+              class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.1fr_1fr]"
+            >
+              <div class="flex justify-center">
+                <div class="relative overflow-hidden p-6">
+                  <div class="-rotate-3">
+                    <svg
+                      viewBox="0 0 300 300"
+                      fill="none"
+                      aria-hidden="true"
+                      class="w-72 animate-wiggle sm:w-[28rem]"
+                    >
+                      <path
+                        data-hide-cursor="true"
+                        d="M148 73C128 34 62 26 58 88c-2 34 14 50 30 54-33 8-48 48-26 78 26 32 70 20 96-18 20 38 68 50 84 8 12-32-10-62-26-76 32-16 36-64 8-86-28-22-62-8-76 25z"
+                        fill="var(--c-green)"
+                        stroke="var(--ink)"
+                        stroke-width="2.2"
+                        stroke-linejoin="round"
+                      ></path>
+                      <g
+                        data-hide-cursor="true"
+                        style="transition: transform 0.25s ease-out"
+                      >
+                        <rect
+                          x="163"
+                          y="88"
+                          width="14"
+                          height="36"
+                          rx="7"
+                          fill="var(--ink)"
+                          transform="rotate(4 170 106)"
+                        ></rect>
+                        <rect
+                          x="188"
+                          y="83"
+                          width="14"
+                          height="41"
+                          rx="7"
+                          fill="var(--ink)"
+                          transform="rotate(6 195 103)"
+                        ></rect>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none absolute inset-0 z-10 bg-[#0d0d0d] opacity-0 transition-opacity duration-200"
+                    style="clip-path: inset(0px 100% 100% 0px)"
+                  >
+                    <div class="p-6">
+                      <div class="-rotate-3">
+                        <svg
+                          viewBox="0 0 300 300"
+                          fill="none"
+                          aria-hidden="true"
+                          class="w-72 animate-wiggle sm:w-[28rem]"
+                        >
+                          <path
+                            data-hide-cursor="true"
+                            d="M148 73C128 34 62 26 58 88c-2 34 14 50 30 54-33 8-48 48-26 78 26 32 70 20 96-18 20 38 68 50 84 8 12-32-10-62-26-76 32-16 36-64 8-86-28-22-62-8-76 25z"
+                            fill="#a94e7e"
+                            stroke="#f5f2ea"
+                            stroke-width="2.2"
+                            stroke-linejoin="round"
+                          ></path>
+                          <g
+                            data-hide-cursor="true"
+                            style="transition: transform 0.25s ease-out"
+                          >
+                            <rect
+                              x="163"
+                              y="88"
+                              width="14"
+                              height="36"
+                              rx="7"
+                              fill="#f0ece3"
+                              transform="rotate(4 170 106)"
+                            ></rect>
+                            <rect
+                              x="188"
+                              y="83"
+                              width="14"
+                              height="41"
+                              rx="7"
+                              fill="#f0ece3"
+                              transform="rotate(6 195 103)"
+                            ></rect>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="pointer-events-none absolute left-0 top-0 z-10 opacity-0 transition-opacity duration-200"
+                  >
+                    <span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span
+                    ><span
+                      class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2
+                  class="whitespace-nowrap font-pixel text-[clamp(2.6rem,6.5vw,5.5rem)] font-bold leading-none tracking-wide text-[var(--ink)]"
+                >
+                  LET'S&nbsp;&nbsp;TALK
+                </h2>
+                <p
+                  class="mt-7 max-w-lg text-lg leading-relaxed text-[var(--ink)] sm:text-xl"
+                >
+                  Open to new opportunities. I'm passionate about solving
+                  real-world problems through data science, analytics, GIS, and
+                  business intelligence: Building solutions that help
+                  organizations make smarter, data-driven decisions. Email is
+                  the fastest way to reach me.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <div data-include="includes/footer.html"></div>
+      </div>
+    </div>
+  </body>
+</html>

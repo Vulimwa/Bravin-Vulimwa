@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Press+Start+2P&display=swap");
+
+:root {
+  --ink: #161616;
+  --c-blue: #7fc8f8;
+  --c-cream: #fdeccb;
+  --c-mint: #b6e2d3;
+  --c-yellow: #ffd166;
+  --c-pink: #ff6b6b;
+  --c-green: #7fd1b9;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--ink);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.canvas-grid {
+  overflow-x: hidden;
+}
+
+
+.image-container-2 {
+  position: relative;
+  display: inline-block;
+/* width: 1.35em; 
+height: 1.05em; */
+  overflow: hidden;
+  border-radius: 0.375rem;
+  vertical-align: -4px;
+}
+
+.responsive-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container to maintain aspect ratio and clipping */
+.image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Standardized image styles */
+.standard-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 700ms cubic-bezier(0, 0, 0.2, 1); /* ease-out */
+}
+
+/* Hover effect (mimicking group-hover:scale-[1.06]) */
+.image-container:hover .standard-img {
+  transform: scale(1.06);
+}
+
+/* Container styles (replaces .relative.aspect-[4/3].w-full.overflow-hidden.md:aspect-auto.md:h-[440px]) */
+.image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Mobile aspect ratio */
+  overflow: hidden;
+}
+
+/* Responsive adjustment for tablets/desktop (replaces md:aspect-auto md:h-[440px]) */
+@media (min-width: 768px) {
+  .image-container {
+    aspect-ratio: auto;
+    height: 440px;
+  }
+}
+
+/* Image styles (replaces .object-cover.object-top and data-nimg="fill") */
+.dashboard-image {
+  position: absolute;
+  inset: 0px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  color: transparent;
+}
+
+/* Badge styles (replaces .absolute.right-4.top-4.flex.items-center.gap-2.px-3.py-1.5...) */
+.badge {
+  position: absolute;
+  right: 1rem; /* 16px */
+  top: 1rem;   /* 16px */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+  padding: 0.375rem 0.75rem; /* 6px 12px */
+  font-family: monospace;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
