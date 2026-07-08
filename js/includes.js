@@ -239,12 +239,12 @@ document.addEventListener("DOMContentLoaded", () => {
           .replaceAll(
             "{{HOME_HREF}}",
             pageName === "index.html"
-              ? "/pages/index.html"
-              : "/pages/index.html",
+              ? "index.html"
+              : "index.html",
           )
-          .replaceAll("{{ABOUT_HREF}}", "/pages/about.html")
-          .replaceAll("{{WORK_HREF}}", "/pages/work.html")
-          .replaceAll("{{WALL_OF_FAME_HREF}}", "/pages/wall-of-fame.html");
+          .replaceAll("{{ABOUT_HREF}}", "about.html")
+          .replaceAll("{{WORK_HREF}}", "work.html")
+          .replaceAll("{{WALL_OF_FAME_HREF}}", "wall-of-fame.html");
 
         if (pageName === "about.html") {
           resolvedHtml = resolvedHtml.replaceAll(
