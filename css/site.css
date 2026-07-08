@@ -29,11 +29,31 @@ body {
   overflow-x: hidden;
 }
 
+[data-auto-grid-track] {
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+}
+
+.sticky-stack {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.sticky-stack > .sticky {
+  position: sticky;
+  top: 176px;
+  margin-bottom: 2rem;
+}
+
+.sticky-stack > .sticky:last-child {
+  margin-bottom: 0;
+}
 
 .image-container-2 {
   position: relative;
   display: inline-block;
-/* width: 1.35em; 
+  /* width: 1.35em; 
 height: 1.05em; */
   overflow: hidden;
   border-radius: 0.375rem;
@@ -102,7 +122,7 @@ height: 1.05em; */
 .badge {
   position: absolute;
   right: 1rem; /* 16px */
-  top: 1rem;   /* 16px */
+  top: 1rem; /* 16px */
   display: flex;
   align-items: center;
   gap: 0.5rem; /* 8px */

@@ -1,0 +1,928 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/site.css" /><script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../js/includes.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#161616",
+            },
+            fontFamily: {
+              hand: ['"Caveat"', "cursive"],
+              pixel: ['"Press Start 2P"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="canvas-grid min-h-screen text-[var(--ink)]">
+      <div data-include="../includes/navbar.html"></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none fixed left-0 top-0 z-[9990] opacity-0 transition-opacity duration-300"
+        style="
+          mix-blend-mode: difference;
+          transform: translate3d(1220px, 104px, 0px);
+          opacity: 1;
+        "
+      >
+        <span
+          class="absolute -left-2 -top-2 block h-3 w-3 rounded-full bg-white"
+        ></span
+        ><span
+          class="block rounded-full rounded-tl-none bg-white px-2.5 py-1 font-mono text-[11px] font-semibold text-black"
+          >YOU</span
+        >
+      </div>
+    <div class="pt-[64px]">
+        <div
+          aria-hidden="true"
+          data-auto-grid-track
+          class="relative h-9 select-none overflow-hidden border-b border-black/10 bg-white sticky top-[64px] z-[90]"
+        >
+          <div
+            class="flex h-full will-change-transform"
+            data-auto-grid
+            data-item-width="130"
+            data-step="100"
+            style="transform: translate3d(0px, 0px, 0px)"
+          ></div>
+        </div>
+      <main>
+        <article>
+          <section class="px-5 pb-16 pt-14 sm:px-8 sm:pt-20">
+            <div
+              class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-8"
+            >
+              <div>
+                <p
+                  class="flex items-center gap-3 font-mono text-sm font-semibold tracking-[0.2em] text-[var(--ink)]"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="h-3 w-3 rounded-full bg-[var(--ink)]"
+                  ></span
+                  >CASE STUDY
+                </p>
+                <h1
+                  class="mt-8 font-pixel text-[clamp(2.6rem,7.5vw,6.2rem)] font-extrabold uppercase leading-[0.95] tracking-tight text-[var(--ink)]"
+                >
+                  Knowledge Sweeper
+                </h1>
+                <p class="mt-8 max-w-md text-xl leading-snug text-[var(--ink)]">
+                  Team knowledge collection and search platform
+                </p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <span
+                    class="folder-chip bg-[#e9e6e0] px-4 pb-2 pt-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)]"
+                    >SaaS</span
+                  ><span
+                    class="folder-chip bg-[#e9e6e0] px-4 pb-2 pt-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)]"
+                    >Productivity</span
+                  ><span
+                    class="folder-chip bg-[#e9e6e0] px-4 pb-2 pt-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)]"
+                    >Fullstack</span
+                  >
+                </div>
+              </div>
+              <div
+                class="grid max-w-md grid-cols-2 gap-2 self-start lg:justify-self-end"
+              >
+                <div
+                  class="px-5 py-4"
+                  style="
+                    background: rgb(178, 227, 246);
+                    transform: translate(2px, 6px) rotate(-3deg);
+                  "
+                >
+                  <p
+                    class="font-mono text-xs font-bold tracking-[0.08em] text-[var(--ink)]"
+                  >
+                    ROLE
+                  </p>
+                  <p class="mt-1.5 text-[15px] leading-snug text-[var(--ink)]">
+                    Full-Stack Engineer
+                  </p>
+                </div>
+                <div
+                  class="px-5 py-4"
+                  style="
+                    background: rgb(241, 222, 168);
+                    transform: translate(-4px, -8px) rotate(3deg);
+                  "
+                >
+                  <p
+                    class="font-mono text-xs font-bold tracking-[0.08em] text-[var(--ink)]"
+                  >
+                    PLATFORM
+                  </p>
+                  <p class="mt-1.5 text-[15px] leading-snug text-[var(--ink)]">
+                    Web
+                  </p>
+                </div>
+                <div
+                  class="px-5 py-4"
+                  style="
+                    background: rgb(174, 221, 199);
+                    transform: translate(6px, -8px) rotate(2deg);
+                  "
+                >
+                  <p
+                    class="font-mono text-xs font-bold tracking-[0.08em] text-[var(--ink)]"
+                  >
+                    FOCUS
+                  </p>
+                  <p class="mt-1.5 text-[15px] leading-snug text-[var(--ink)]">
+                    SaaS · Productivity
+                  </p>
+                </div>
+                <div
+                  class="px-5 py-4"
+                  style="
+                    background: rgb(241, 193, 209);
+                    transform: translate(-6px, -2px) rotate(-2.5deg);
+                  "
+                >
+                  <p
+                    class="font-mono text-xs font-bold tracking-[0.08em] text-[var(--ink)]"
+                  >
+                    LIVE
+                  </p>
+                  <p class="mt-1.5 text-[15px] leading-snug text-[var(--ink)]">
+                    <a
+                      href="https://knowledge-sweeper.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                      data-hide-cursor="true"
+                      class="group relative inline-block pb-0.5"
+                      ><span
+                        aria-hidden="true"
+                        class="absolute bottom-0 left-0 h-px w-full origin-left bg-current transition-transform duration-300 ease-out group-hover:scale-x-[1.06]"
+                      ></span
+                      ><span
+                        class="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                        >knowledge-sweeper.vercel.app ↗</span
+                      ></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="px-5 sm:px-8">
+            <div
+              class="relative bg-white"
+              style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+            >
+              <div
+                class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+              >
+                <img
+                  alt="Knowledge Sweeper screenshot"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="object-cover object-top"
+                  sizes="100vw"
+                  srcset="
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=640&amp;q=75   640w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=750&amp;q=75   750w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=828&amp;q=75   828w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=1080&amp;q=75 1080w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=1200&amp;q=75 1200w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=1920&amp;q=75 1920w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=2048&amp;q=75 2048w,
+                    /_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="/_next/image?url=%2Fassets%2Fknowledge-one.png&amp;w=3840&amp;q=75"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span>
+            </div>
+          </div>
+          <section class="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-24">
+            <h2
+              class="text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-[2.6rem] sm:leading-tight"
+            >
+              The Real Problem
+            </h2>
+            <div
+              class="mt-7 space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+            >
+              <p>
+                Teams rely on chat tools for day-to-day work, but important
+                information is often difficult to retrieve later.
+              </p>
+            </div>
+          </section>
+          <div class="px-5 sm:px-8">
+            <div
+              class="relative bg-white"
+              style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+            >
+              <div
+                class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+              >
+                <img
+                  alt="Knowledge Sweeper screenshot"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="object-cover object-top"
+                  sizes="100vw"
+                  srcset="
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=640&amp;q=75   640w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=750&amp;q=75   750w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=828&amp;q=75   828w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=1080&amp;q=75 1080w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=1200&amp;q=75 1200w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=1920&amp;q=75 1920w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=2048&amp;q=75 2048w,
+                    /_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="/_next/image?url=%2Fassets%2Fknowledge-two.png&amp;w=3840&amp;q=75"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span>
+            </div>
+          </div>
+          <section class="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-24">
+            <h2
+              class="text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-[2.6rem] sm:leading-tight"
+            >
+              The Approach
+            </h2>
+            <div
+              class="mt-7 space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+            >
+              <p>
+                Make team knowledge easier to find without changing existing
+                communication workflows.
+              </p>
+              <p>
+                The platform integrates with Slack and Discord, stores
+                structured conversation data, and provides a searchable
+                interface for past discussions.
+              </p>
+            </div>
+          </section>
+          <div class="px-5 sm:px-8">
+            <div
+              class="relative bg-white"
+              style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+            >
+              <div
+                class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+              >
+                <img
+                  alt="Knowledge Sweeper screenshot"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="object-cover object-top"
+                  sizes="100vw"
+                  srcset="
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=640&amp;q=75   640w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=750&amp;q=75   750w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=828&amp;q=75   828w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=1080&amp;q=75 1080w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=1200&amp;q=75 1200w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=1920&amp;q=75 1920w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=2048&amp;q=75 2048w,
+                    /_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="/_next/image?url=%2Fassets%2Fknowledge-three.png&amp;w=3840&amp;q=75"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span>
+            </div>
+          </div>
+          <section class="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-24">
+            <h2
+              class="text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-[2.6rem] sm:leading-tight"
+            >
+              What I Built
+            </h2>
+            <div
+              class="mt-7 space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+            >
+              <ol class="list-decimal space-y-3 pl-5 marker:font-semibold">
+                <li>
+                  Architected real-time integration pipelines for Slack and
+                  Discord webhooks
+                </li>
+                <li>
+                  Designed scalable data models and indexing strategies for
+                  message storage
+                </li>
+                <li>
+                  Built a responsive React frontend with advanced search and
+                  filtering capabilities
+                </li>
+                <li>
+                  Implemented RESTful APIs with caching layers for sub-100ms
+                  response times
+                </li>
+                <li>
+                  Engineered background job processing for summarization and
+                  metadata extraction
+                </li>
+              </ol>
+            </div>
+          </section>
+          <div class="px-5 sm:px-8">
+            <div
+              class="relative bg-white"
+              style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+            >
+              <div
+                class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+              >
+                <img
+                  alt="Knowledge Sweeper screenshot"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="object-cover object-top"
+                  sizes="100vw"
+                  srcset="
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=640&amp;q=75   640w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=750&amp;q=75   750w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=828&amp;q=75   828w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=1080&amp;q=75 1080w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=1200&amp;q=75 1200w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=1920&amp;q=75 1920w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=2048&amp;q=75 2048w,
+                    /_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="/_next/image?url=%2Fassets%2Fknowledge-four.png&amp;w=3840&amp;q=75"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  top: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  left: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span
+              ><span
+                aria-hidden="true"
+                class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                style="
+                  bottom: -6px;
+                  right: -6px;
+                  border: 1.5px solid rgb(22, 22, 22);
+                "
+              ></span>
+            </div>
+          </div>
+          <section class="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-24">
+            <h2
+              class="text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-[2.6rem] sm:leading-tight"
+            >
+              What Changed
+            </h2>
+            <div
+              class="mt-7 space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+            >
+              <ul class="list-disc space-y-3 pl-5">
+                <li>Reduced knowledge discovery time by 70% across teams</li>
+                <li>
+                  Processed and indexed 500k+ messages with sub-second search
+                  latency
+                </li>
+                <li>
+                  Improved decision-making velocity with historical context
+                  retrieval
+                </li>
+                <li>
+                  Built scalable foundation supporting integrations for 15+
+                  workspaces
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="pb-16">
+            <div class="px-5 sm:px-8">
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+                >
+                  <img
+                    alt="Knowledge Sweeper screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="object-cover object-top"
+                    sizes="100vw"
+                    srcset="
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="/_next/image?url=%2Fassets%2Fknowledge-five.png&amp;w=3840&amp;q=75"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    left: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    right: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    left: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    right: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="pb-16">
+            <div class="px-5 sm:px-8">
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+                >
+                  <img
+                    alt="Knowledge Sweeper screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="object-cover object-top"
+                    sizes="100vw"
+                    srcset="
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="/_next/image?url=%2Fassets%2Fknowledge-six.png&amp;w=3840&amp;q=75"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    left: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    right: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    left: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    right: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="pb-16">
+            <div class="px-5 sm:px-8">
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+                >
+                  <img
+                    alt="Knowledge Sweeper screenshot"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="object-cover object-top"
+                    sizes="100vw"
+                    srcset="
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="/_next/image?url=%2Fassets%2Fknowledge-seven.png&amp;w=3840&amp;q=75"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    left: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    top: -6px;
+                    right: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    left: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span
+                ><span
+                  aria-hidden="true"
+                  class="absolute z-10 block h-[11px] w-[11px] bg-white"
+                  style="
+                    bottom: -6px;
+                    right: -6px;
+                    border: 1.5px solid rgb(22, 22, 22);
+                  "
+                ></span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <section id="contact" class="scroll-mt-24 px-5 pb-28 pt-8 sm:px-8">
+          <div
+            class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.1fr_1fr]"
+          >
+            <div class="flex justify-center">
+              <div class="relative overflow-hidden p-6">
+                <div class="-rotate-3">
+                  <svg
+                    viewBox="0 0 300 300"
+                    fill="none"
+                    aria-hidden="true"
+                    class="w-72 animate-wiggle sm:w-[28rem]"
+                  >
+                    <path
+                      data-hide-cursor="true"
+                      d="M148 73C128 34 62 26 58 88c-2 34 14 50 30 54-33 8-48 48-26 78 26 32 70 20 96-18 20 38 68 50 84 8 12-32-10-62-26-76 32-16 36-64 8-86-28-22-62-8-76 25z"
+                      fill="var(--c-green)"
+                      stroke="var(--ink)"
+                      stroke-width="2.2"
+                      stroke-linejoin="round"
+                    ></path>
+                    <g
+                      data-hide-cursor="true"
+                      style="transition: transform 0.25s ease-out"
+                    >
+                      <rect
+                        x="163"
+                        y="88"
+                        width="14"
+                        height="36"
+                        rx="7"
+                        fill="var(--ink)"
+                        transform="rotate(4 170 106)"
+                      ></rect>
+                      <rect
+                        x="188"
+                        y="83"
+                        width="14"
+                        height="41"
+                        rx="7"
+                        fill="var(--ink)"
+                        transform="rotate(6 195 103)"
+                      ></rect>
+                    </g>
+                  </svg>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="pointer-events-none absolute inset-0 z-10 bg-[#0d0d0d] opacity-0 transition-opacity duration-200"
+                  style="clip-path: inset(0px 100% 100% 0px)"
+                >
+                  <div class="p-6">
+                    <div class="-rotate-3">
+                      <svg
+                        viewBox="0 0 300 300"
+                        fill="none"
+                        aria-hidden="true"
+                        class="w-72 animate-wiggle sm:w-[28rem]"
+                      >
+                        <path
+                          data-hide-cursor="true"
+                          d="M148 73C128 34 62 26 58 88c-2 34 14 50 30 54-33 8-48 48-26 78 26 32 70 20 96-18 20 38 68 50 84 8 12-32-10-62-26-76 32-16 36-64 8-86-28-22-62-8-76 25z"
+                          fill="#a94e7e"
+                          stroke="#f5f2ea"
+                          stroke-width="2.2"
+                          stroke-linejoin="round"
+                        ></path>
+                        <g
+                          data-hide-cursor="true"
+                          style="transition: transform 0.25s ease-out"
+                        >
+                          <rect
+                            x="163"
+                            y="88"
+                            width="14"
+                            height="36"
+                            rx="7"
+                            fill="#f0ece3"
+                            transform="rotate(4 170 106)"
+                          ></rect>
+                          <rect
+                            x="188"
+                            y="83"
+                            width="14"
+                            height="41"
+                            rx="7"
+                            fill="#f0ece3"
+                            transform="rotate(6 195 103)"
+                          ></rect>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 opacity-0 transition-opacity duration-200"
+                >
+                  <span
+                    class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                  ></span
+                  ><span
+                    class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                  ></span
+                  ><span
+                    class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                  ></span
+                  ><span
+                    class="absolute left-0 top-0 block h-[18px] w-[18px] bg-[#0d0d0d] will-change-transform"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2
+                class="whitespace-nowrap font-pixel text-[clamp(2.6rem,6.5vw,5.5rem)] font-bold leading-none tracking-wide text-[var(--ink)]"
+              >
+                LET'S&nbsp;&nbsp;TALK
+              </h2>
+              <p
+                class="mt-7 max-w-lg text-lg leading-relaxed text-[var(--ink)] sm:text-xl"
+              >
+                Open to new work. I'm most energized by systems where
+                reliability actually matters: payments, healthcare,
+                infrastructure. Email is the fastest way to reach me.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div data-include="../includes/footer.html"></div>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>
