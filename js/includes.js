@@ -176,6 +176,42 @@ function initSharedMotion() {
 document.addEventListener("DOMContentLoaded", () => {
   initSharedMotion();
 
+  // Live East Africa Time (EAT) clock
+  function formatEAT(now) {
+    // EAT is UTC+3
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+    const eat = new Date(utc + 3 * 3600000);
+    const hh = String(eat.getHours()).padStart(2, "0");
+    const mm = String(eat.getMinutes()).padStart(2, "0");
+    const ss = String(eat.getSeconds()).padStart(2, "0");
+    return `${hh}:${mm}:${ss}`;
+  }
+
+  function startEATClock() {
+    const nodes = Array.from(document.querySelectorAll('[aria-label="Current time in Kenya"]'));
+    if (!nodes.length) return;
+
+    function tick() {
+      const now = new Date();
+      const time = formatEAT(now);
+      nodes.forEach((node) => {
+        // keep any child markup (like the EAT label) but replace the numeric time
+        const eatLabel = node.querySelector('.eat-label');
+        if (eatLabel) {
+          node.firstChild.textContent = time;
+        } else {
+          // replace inner content with time + span
+          node.innerHTML = `${time}<span class="ml-1 not-italic opacity-60 eat-label">EAT</span>`;
+        }
+      });
+    }
+
+    tick();
+    window.setInterval(tick, 1000);
+  }
+
+  startEATClock();
+
   const includeTargets = document.querySelectorAll("[data-include]");
 
   includeTargets.forEach((element) => {

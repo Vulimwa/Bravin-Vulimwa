@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/includes.js"></script>
+    <script src="/js/includes.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -23,11 +23,11 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="/css/site.css" />
   </head>
   <body>
     <div class="canvas-grid min-h-screen text-[var(--ink)]">
-      <div data-include="includes/navbar.html"></div>
+      <div data-include="/pages/includes/navbar.html"></div>
       <div
         aria-hidden="true"
         class="pointer-events-none fixed left-0 top-0 z-[9990] opacity-0 transition-opacity duration-300"
@@ -1532,7 +1532,7 @@
                 </div>
               </div>
               <div>
-               <h2
+                <h2
                   class="whitespace-nowrap font-pixel text-[clamp(1.5rem,6vw,3rem)] font-bold leading-none tracking-wide text-[var(--ink)]"
                 >
                   LET'S&nbsp;&nbsp;TALK
@@ -1550,7 +1550,7 @@
             </div>
           </section>
         </main>
-        <div data-include="includes/footer.html"></div>
+        <div data-include="/pages/includes/footer.html"></div>
       </div>
     </div>
   </body>
