@@ -3,31 +3,14 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/css/(.*)",
-      "destination": "/css/$1"
-    },
-    {
-      "source": "/js/(.*)",
-      "destination": "/js/$1"
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!css|js|assets|pages).*)",
       "destination": "/pages/$1"
     }
   ],
   "redirects": [
     {
       "source": "/includes/(.*)",
-      "destination": "/pages/404.html",
-      "statusCode": 404
-    },
-    {
-      "source": "/template/(.*)",
-      "destination": "/pages/404.html",
+      "destination": "/404",
       "statusCode": 404
     }
   ]
