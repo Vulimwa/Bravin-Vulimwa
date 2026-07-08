@@ -188,7 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startEATClock() {
-    const nodes = Array.from(document.querySelectorAll('[aria-label="Current time in Kenya"]'));
+    const nodes = Array.from(
+      document.querySelectorAll('[aria-label="Current time in Kenya"]'),
+    );
     if (!nodes.length) return;
 
     function tick() {
@@ -196,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const time = formatEAT(now);
       nodes.forEach((node) => {
         // keep any child markup (like the EAT label) but replace the numeric time
-        const eatLabel = node.querySelector('.eat-label');
+        const eatLabel = node.querySelector(".eat-label");
         if (eatLabel) {
           node.firstChild.textContent = time;
         } else {
