@@ -15,18 +15,20 @@
       "destination": "/assets/$1"
     },
     {
+      "source": "/(.*)",
+      "destination": "/pages/$1"
+    }
+  ],
+  "redirects": [
+    {
       "source": "/includes/(.*)",
-      "status": 404,
-      "destination": "/pages/404.html"
+      "destination": "/pages/404.html",
+      "statusCode": 404
     },
     {
       "source": "/template/(.*)",
-      "status": 404,
-      "destination": "/pages/404.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/pages/$1"
+      "destination": "/pages/404.html",
+      "statusCode": 404
     }
   ]
 }
