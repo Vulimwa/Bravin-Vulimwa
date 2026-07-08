@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>404 · Page Not Found</title>
+    <meta name="description" content="Page not found" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/includes.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#161616",
+            },
+            fontFamily: {
+              hand: ['"Caveat"', "cursive"],
+              pixel: ['"Press Start 2P"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="canvas-grid min-h-screen text-[var(--ink)]">
+      <div data-include="/pages/includes/navbar.html"></div>
+      <main class="pt-[100px]">
+        <section class="mx-auto max-w-4xl px-5 py-24 text-center sm:px-8 sm:py-32">
+          <p class="font-mono text-sm font-semibold uppercase tracking-[0.2em] text-[var(--ink)]">
+            404 • Page not found
+          </p>
+          <h1 class="mt-8 font-pixel text-[clamp(3rem,8vw,6rem)] font-bold leading-[0.95] tracking-tight text-[var(--ink)]">
+            That page can’t be found.
+          </h1>
+          <p class="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-[var(--ink)]/80 sm:text-lg">
+            The page you are looking for was moved, renamed, or does not exist. Use the navigation above or return to the homepage.
+          </p>
+          <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+            <a
+              href="/pages/index.html"
+              class="inline-flex items-center justify-center rounded-full border-2 border-[var(--ink)] px-7 py-3 text-sm font-semibold transition-colors hover:bg-[var(--ink)] hover:text-white"
+              >Go home</a
+            >
+            <a
+              href="/pages/work.html"
+              class="inline-flex items-center justify-center rounded-full border-2 border-[var(--ink)] px-7 py-3 text-sm font-semibold transition-colors hover:bg-[var(--ink)] hover:text-white"
+              >See work</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
