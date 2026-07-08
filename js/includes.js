@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
               : "/pages/index.html",
           )
           .replaceAll("{{ABOUT_HREF}}", "/pages/about.html")
-          .replaceAll("{{WORK_HREF}}", "/pages/work.html");
+          .replaceAll("{{WORK_HREF}}", "/pages/work.html")
+          .replaceAll("{{WALL_OF_FAME_HREF}}", "/pages/wall-of-fame.html");
 
         if (pageName === "about.html") {
           resolvedHtml = resolvedHtml.replaceAll(

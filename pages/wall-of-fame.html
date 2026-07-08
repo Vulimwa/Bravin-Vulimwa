@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/includes.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#161616",
+            },
+            fontFamily: {
+              hand: ['"Caveat"', "cursive"],
+              pixel: ['"Press Start 2P"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="canvas-grid min-h-screen text-[var(--ink)]">
+      <div data-include="includes/navbar.html"></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none fixed left-0 top-0 z-[9990] opacity-0 transition-opacity duration-300"
+        style="
+          mix-blend-mode: difference;
+          transform: translate3d(1220px, 104px, 0px);
+          opacity: 1;
+        "
+      >
+        <span
+          class="absolute -left-2 -top-2 block h-3 w-3 rounded-full bg-white"
+        ></span
+        ><span
+          class="block rounded-full rounded-tl-none bg-white px-2.5 py-1 font-mono text-[11px] font-semibold text-black"
+          >YOU</span
+        >
+      </div>
+      <div class="pt-[64px]">
+        <!-- ADD THE GRID HERE -->
+        <div
+          aria-hidden="true"
+          class="relative h-9 select-none overflow-hidden border-b border-black/10 bg-white sticky top-[64px] z-[90]"
+        >
+          <div
+            class="flex h-full will-change-transform"
+            data-auto-grid
+            data-item-width="130"
+            data-step="100"
+            style="transform: translate3d(0px, 0px, 0px)"
+          ></div>
+        </div>
+        <main class="pb-28">
+          <section
+            class="flex flex-col items-center px-5 pt-14 text-center sm:px-8 sm:pt-16"
+          >
+            <p class="font-hand text-2xl text-[var(--ink)] sm:text-3xl">
+              every milestone, one achievement
+            </p>
+            <svg
+              width="120"
+              height="14"
+              viewBox="0 0 120 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 8c20-6 40 6 58 0s40-6 58 0"
+                stroke="var(--ink)"
+                stroke-width="1.6"
+              ></path>
+              <path
+                d="M14 12c18-5 36 4 52 0s36-5 52 0"
+                stroke="var(--ink)"
+                stroke-width="1.2"
+              ></path>
+            </svg>
+            <h1
+              class="mt-8 font-pixel text-[clamp(2.8rem,9vw,6.5rem)] font-bold leading-[0.95] tracking-tight"
+            >
+              WALL OF FAME
+            </h1>
+            <p
+              class="mt-8 max-w-md -rotate-1 border border-black/10 bg-[var(--c-cream)] px-7 py-5 text-sm font-medium leading-relaxed shadow-[0_2px_12px_rgba(0,0,0,0.1)] sm:text-base"
+            >
+              Awards, certifications, leadership, and milestones that reflect my
+              journey in Data Science, GIS, Urban Planning, and innovation.
+            </p>
+          </section>
+          <div
+            class="mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 px-5 sm:px-8 md:grid-cols-2"
+          >
+            <a
+              class="group relative block cursor-none"
+              href="https://www.linkedin.com/posts/patriciavlatorre_rethinkingroofs-wuf13-climateadaptation-ugcPost-7465034915089219584-emw0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb1l_0BPkltq_TP8RUPm3V8nX6v666xzN4"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >RETHINKING ROOFS COMPETITION 2026 WINNER-COLLECTIVE SOCIAL
+                SOLUTION</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <img
+                    src="/assets/overview_dashboard.png"
+                    onerror="this.src = '/assets/placeholder.png'"
+                    ...
+                  />
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(304.111px, 136.542px, 0px);
+                "
+                >See</span
+              ></a
+            ><a
+              class="group relative block cursor-none"
+              href="https://www.linkedin.com/posts/bravin-vulimwa-b65842292_aak-aak-urbanplanning-activity-7329253071924998144-X2gs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb1l_0BPkltq_TP8RUPm3V8nX6v666xzN4"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >AAK TOWN PLANNERS CHAPTER COMPETITION</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <img
+                    src="/assets/hifadhi.png"
+                    onerror="this.src = '/assets/placeholder.png'"
+                    ...
+                  />
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(205.111px, 142.542px, 0px);
+                "
+                >See</span
+              ></a
+            ><a
+              class="group relative block cursor-none"
+              href="https://www.linkedin.com/posts/bravin-vulimwa-b65842292_geosksymposium2025-geospatialdata-innovation-activity-7377821684319465472-KhS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb1l_0BPkltq_TP8RUPm3V8nX6v666xzN4"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >GEOSK SYMPOSIUM 2025-MAPS AND POSTER CATEGORY</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <img
+                    src="/assets/maji_ndogo.png"
+                    onerror="this.src = '/assets/placeholder.png'"
+                    ...
+                  />
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(297.111px, 13.7639px, 0px);
+                "
+                >See</span
+              ></a
+            ><a
+              class="group relative block cursor-none"
+              href="https://www.linkedin.com/posts/bravin-vulimwa-b65842292_taitatavetaaichallenge-urbanplanning-techforgood-activity-7405686703245410304-Xpc6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb1l_0BPkltq_TP8RUPm3V8nX6v666xzN4"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >TAITA TAVETA AI CHALLENGE 2025</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <img
+                    src="/assets/migori_lpludp.png"
+                    onerror="this.src = '/assets/placeholder.png'"
+                    ...
+                  />
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(-42.8889px, 315.431px, 0px);
+                "
+                >See</span
+              ></a
+            ><a class="group relative block cursor-none" href="/work/5"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >AIR QUALITY PREDICTIVE ANALYTICS</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="flex aspect-[16/10] w-full items-center justify-center px-8 text-center"
+                  style="background: var(--c-cream)"
+                >
+                  <span
+                    class="font-pixel text-3xl font-bold uppercase tracking-tight text-[var(--ink)] sm:text-4xl"
+                    >AIR QUALITY PREDICTIVE ANALYTICS</span
+                  >
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(297.111px, 313.431px, 0px);
+                "
+                >See</span
+              ></a
+            ><a class="group relative block cursor-none" href="/work/6"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >POND SUITABILITY ANALYSIS</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <img
+                    src="/assets/pond_suitability.jpg"
+                    onerror="this.src = '/assets/placeholder.png'"
+                    ...
+                  />
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(-28.8889px, -19.5695px, 0px);
+                "
+                >See</span
+              ></a
+            ><a class="group relative block cursor-none" href="/work/7"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >COMMUNITY LAND USE & ZONING DATABASE</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="flex aspect-[16/10] w-full items-center justify-center px-8 text-center"
+                  style="background: var(--c-mint)"
+                >
+                  <span
+                    class="font-pixel text-3xl font-bold uppercase tracking-tight text-[var(--ink)] sm:text-4xl"
+                    >COMMUNITY LAND USE & ZONING DATABASE</span
+                  >
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(388.111px, 235.097px, 0px);
+                "
+                >See</span
+              ></a
+            ><a class="group relative block cursor-none" href="/work/8"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >SALES PERFORMANCE INTELLIGENCE DASHBOARD</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <img
+                    src="/assets/pizza_dashboard_home.jpg"
+                    onerror="this.src = '/assets/placeholder.png'"
+                    ...
+                  />
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(207.111px, 9.54166px, 0px);
+                "
+                >See</span
+              ></a
+            ><a class="group relative block cursor-none" href="/work/9"
+              ><span
+                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                ><span
+                  aria-hidden="true"
+                  class="h-2.5 w-2.5 rounded-full bg-current"
+                ></span
+                >ENCROACHMENT ANALYSIS</span
+              >
+              <div
+                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                >
+                  <div class="image-container">
+                    <img
+                      src="/assets/Encroachment.png"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                style="
+                  mix-blend-mode: difference;
+                  transform: translate3d(482.111px, 60.5417px, 0px);
+                "
+                >See</span
+              ></a
+            >
+          </div>
+        </main>
+        <div data-include="includes/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="" async defer></script>
+  </body>
+</html>
