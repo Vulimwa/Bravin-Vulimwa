@@ -159,7 +159,10 @@
     <button
       type="button"
       aria-expanded="false"
-      class="ml-auto flex items-center gap-2.5 self-center border-2 border-[var(--ink)] bg-white px-3.5 py-1.5 font-mono text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-white md:hidden"
+      aria-controls="mobile-menu"
+      data-mobile-menu-toggle
+      aria-label="Open navigation menu"
+      class="mobile-menu-toggle ml-auto flex items-center gap-2.5 self-center border-2 border-[var(--ink)] bg-white px-3.5 py-1.5 font-mono text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-white md:hidden"
     >
       MENU<svg
         width="16"
@@ -178,6 +181,8 @@
     </button>
   </div>
   <div
+    id="mobile-menu"
+    data-mobile-menu
     class="overflow-hidden border-b border-black/10 bg-white transition-[max-height] duration-300 ease-out md:hidden max-h-0 border-b-0"
   >
     <nav aria-label="Mobile">

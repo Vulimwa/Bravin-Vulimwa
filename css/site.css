@@ -29,6 +29,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Keep the hamburger control visible while the shared navbar loads on phones. */
+.mobile-menu-toggle {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
 [data-auto-grid-track] {
   position: sticky;
   top: 64px;

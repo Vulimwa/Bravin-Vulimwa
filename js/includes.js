@@ -173,6 +173,33 @@ function initSharedMotion() {
   window.addEventListener("resize", startMotion);
 }
 
+function initMobileNav(scope) {
+  const toggle = scope.querySelector("[data-mobile-menu-toggle]");
+  const menu = scope.querySelector("[data-mobile-menu]");
+
+  if (!toggle || !menu) return;
+
+  const setMenuOpen = (isOpen) => {
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu",
+    );
+    menu.classList.toggle("max-h-0", !isOpen);
+    menu.classList.toggle("border-b-0", !isOpen);
+    menu.classList.toggle("max-h-[420px]", isOpen);
+    menu.classList.toggle("border-b", isOpen);
+  };
+
+  toggle.addEventListener("click", () => {
+    setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initSharedMotion();
 
@@ -252,6 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         element.innerHTML = resolvedHtml;
+        initMobileNav(element);
         requestAnimationFrame(renderAutoGrid);
       })
       .catch((error) => {
