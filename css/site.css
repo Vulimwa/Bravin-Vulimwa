@@ -34,9 +34,53 @@ body {
   display: flex;
 }
 
+.nav-tooltip {
+  z-index: 200;
+  position: absolute;
+}
+
 @media (min-width: 768px) {
   .mobile-menu-toggle {
     display: none !important;
+  }
+}
+
+.company-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.company-marquee-track {
+  display: flex;
+  width: max-content;
+  min-width: max-content;
+  animation: company-marquee 18s linear infinite;
+}
+
+.company-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes company-marquee {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
