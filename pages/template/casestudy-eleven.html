@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Triple Nexus Tracker | Case Study</title>
+    <meta
+      name="description"
+      content="A geospatial decision-support system connecting demining, reconstruction, and investment workflows."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/jpeg" href="/assets/bravin.jpg" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/includes.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { ink: "#161616" },
+            fontFamily: {
+              hand: ['"Caveat"', "cursive"],
+              pixel: ['"Press Start 2P"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="canvas-grid min-h-screen text-[var(--ink)]">
+      <div data-include="/pages/includes/navbar.html"></div>
+      <div class="pt-[100px]">
+        <main>
+          <article>
+            <section class="px-5 pb-10 pt-14 sm:px-8 sm:pt-20">
+              <div
+                class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-8"
+              >
+                <div>
+                  <p
+                    class="flex items-center gap-3 font-mono text-sm font-semibold tracking-[0.2em]"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="h-3 w-3 rounded-full bg-[var(--ink)]"
+                    ></span
+                    >CASE STUDY
+                  </p>
+                  <h1
+                    class="mt-8 font-pixel text-[clamp(2.6rem,7.5vw,6.2rem)] font-extrabold uppercase leading-[0.95] tracking-tight"
+                  >
+                    Triple Nexus Tracker
+                  </h1>
+                  <p class="mt-8 max-w-xl text-xl leading-snug">
+                    An integrated ArcGIS decision-support system that connects
+                    demining, reconstruction, and investment workflows for
+                    safer, more coordinated post-conflict recovery.
+                  </p>
+                  <div class="mt-8 flex flex-wrap gap-3">
+                    <span
+                      class="folder-chip bg-[#e9e6e0] px-4 pb-2 pt-4 font-mono text-xs font-semibold uppercase tracking-[0.12em]"
+                      >GIS & Spatial Analysis</span
+                    >
+                    <span
+                      class="folder-chip bg-[#e9e6e0] px-4 pb-2 pt-4 font-mono text-xs font-semibold uppercase tracking-[0.12em]"
+                      >ArcGIS Applications</span
+                    >
+                    <span
+                      class="folder-chip bg-[#e9e6e0] px-4 pb-2 pt-4 font-mono text-xs font-semibold uppercase tracking-[0.12em]"
+                      >Decision Support</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grid max-w-md grid-cols-2 gap-2 self-start lg:justify-self-end"
+                >
+                  <div
+                    class="px-5 py-4"
+                    style="
+                      background: rgb(178, 227, 246);
+                      transform: translate(2px, 6px) rotate(-3deg);
+                    "
+                  >
+                    <p class="font-mono text-xs font-bold tracking-[0.08em]">
+                      ROLE
+                    </p>
+                    <p class="mt-1.5 text-[15px] leading-snug">
+                      GIS & Spatial Systems Developer
+                    </p>
+                  </div>
+                  <div
+                    class="px-5 py-4"
+                    style="
+                      background: rgb(241, 222, 168);
+                      transform: translate(-4px, -8px) rotate(3deg);
+                    "
+                  >
+                    <p class="font-mono text-xs font-bold tracking-[0.08em]">
+                      PLATFORM
+                    </p>
+                    <p class="mt-1.5 text-[15px] leading-snug">
+                      ArcGIS Online · Experience Builder · Feature Services Esri
+                      Maps SDK · ArcGIS API for JavaScript · ArcGIS AllSource ·
+                      ArcGIS Dashboards · ArcGIS Web AppBuilder
+                    </p>
+                  </div>
+                  <div
+                    class="px-5 py-4"
+                    style="
+                      background: rgb(174, 221, 199);
+                      transform: translate(6px, -8px) rotate(2deg);
+                    "
+                  >
+                    <p class="font-mono text-xs font-bold tracking-[0.08em]">
+                      FOCUS
+                    </p>
+                    <p class="mt-1.5 text-[15px] leading-snug">
+                      Recovery · Risk · Infrastructure · Investment
+                    </p>
+                  </div>
+                  <div
+                    class="px-5 py-4"
+                    style="
+                      background: rgb(241, 193, 209);
+                      transform: translate(-6px, -2px) rotate(-2.5deg);
+                    "
+                  >
+                    <p class="font-mono text-xs font-bold tracking-[0.08em]">
+                      LIVE
+                    </p>
+                    <p class="mt-1.5 text-[15px] leading-snug">
+                      <a
+                        href="https://experience.arcgis.com/experience/a265c597e95f4ef7bc3588d6ab242d37"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="underline decoration-1 underline-offset-4 hover:opacity-70"
+                        >Open the Triple Nexus System ↗</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="mx-auto max-w-3xl px-5 pt-6 pb-2 sm:px-8">
+              <h2
+                class="text-3xl font-semibold tracking-tight sm:text-[2.6rem] sm:leading-tight"
+              >
+                The Real Problem
+              </h2>
+              <div
+                class="mt-7 space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+              >
+                <p>
+                  Post-conflict recovery involves organizations with different
+                  responsibilities, datasets, and operational timelines.
+                  Demining teams may manage hazard evidence, planners may manage
+                  infrastructure proposals, and investors may screen projects
+                  independently.
+                </p>
+                <p>
+                  When those activities stay disconnected, project alignments
+                  can be planned without enough spatial risk context, field
+                  verification becomes difficult to track, and investment
+                  decisions lose the operational evidence behind them.
+                </p>
+              </div>
+            </section>
+            <section class="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-14">
+              <h2
+                class="text-3xl font-semibold tracking-tight sm:text-[2.6rem] sm:leading-tight"
+              >
+                The Approach
+              </h2>
+              <div
+                class="mt-7 space-y-6 text-[17px] leading-relaxed text-[var(--ink)]/90"
+              >
+                <p>
+                  I designed the Triple Nexus as a shared geospatial information
+                  environment. The system links three decision environments: a
+                  Demining Portal for hazard investigation and field
+                  verification, a Reconstruction Portal for project planning and
+                  delivery, and an Investor Portal for opportunity discovery and
+                  due diligence.
+                </p>
+                <p>
+                  Rather than treating risk, infrastructure, and investment as
+                  separate datasets, the workflow carries spatial evidence
+                  through the lifecycle of a project. A proposed alignment can
+                  be tested, reviewed, assessed, and monitored while remaining
+                  available to the other portals.
+                </p>
+              </div>
+            </section>
+            <div class="px-5 sm:px-8">
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+                >
+                  <img
+                    src="/assets/triple-nexus-12.jpeg"
+                    alt="Triple Nexus Tracker portal relationship diagram"
+                    class="absolute inset-0 h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <section class="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-14">
+              <h2
+                class="text-3xl font-semibold tracking-tight sm:text-[2.6rem] sm:leading-tight"
+              >
+                What I Built
+              </h2>
+              <div
+                class="mt-7 text-[17px] leading-relaxed text-[var(--ink)]/90"
+              >
+                <ol class="list-decimal space-y-3 pl-5 marker:font-semibold">
+                  <li>
+                    Created connected portal experiences for demining,
+                    reconstruction, and investment stakeholders.
+                  </li>
+                  <li>
+                    Built a reconstruction workflow that captures proposed
+                    infrastructure as an actual polyline alignment.
+                  </li>
+                  <li>
+                    Persisted project geometry in ArcGIS Feature Services so it
+                    can be retrieved across applications instead of living only
+                    in a browser session.
+                  </li>
+                  <li>
+                    Connected hazard evidence, terrain, conflict history,
+                    infrastructure, field assessments, tasks, and work orders.
+                  </li>
+                  <li>
+                    Added spatial risk and priority outputs as decision-support
+                    indicators for investigation and planning.
+                  </li>
+                  <li>
+                    Designed dashboards, maps, reports, and monitoring views for
+                    operational and investment decisions.
+                  </li>
+                </ol>
+              </div>
+            </section>
+            <div class="px-5 sm:px-8">
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div
+                  class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2/1]"
+                >
+                  <img
+                    src="/assets/triple-nexus-17.png"
+                    alt="Triple Nexus Tracker system view"
+                    class="absolute inset-0 h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="grid gap-8 px-5 sm:px-8 lg:grid-cols-2">
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div class="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src="/assets/triple-nexus-16.png"
+                    alt="Triple Nexus Tracker project alignment workflow"
+                    class="absolute inset-0 h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="relative bg-white"
+                style="box-shadow: rgb(22, 22, 22) 0px 0px 0px 1px"
+              >
+                <div class="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src="/assets/triple-nexus-09.png"
+                    alt="Triple Nexus Tracker project monitoring dashboard"
+                    class="absolute inset-0 h-full w-full object-cover object-top"
+                  />
+                </div>
+              </div>
+            </div>
+            <section class="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-14">
+              <h2
+                class="text-3xl font-semibold tracking-tight sm:text-[2.6rem] sm:leading-tight"
+              >
+                What Changed
+              </h2>
+              <div
+                class="mt-7 text-[17px] leading-relaxed text-[var(--ink)]/90"
+              >
+                <ul class="list-disc space-y-3 pl-5">
+                  <li>
+                    Recovery projects can be viewed with the spatial evidence
+                    needed to understand risk, context, and operational status.
+                  </li>
+                  <li>
+                    Project geometry becomes authoritative, reusable information
+                    that can move between portals and teams.
+                  </li>
+                  <li>
+                    The workflow creates traceability from proposal through
+                    review, field assessment, work orders, implementation, and
+                    investment consideration.
+                  </li>
+                  <li>
+                    Analytical outputs support prioritization without being
+                    mistaken for direct confirmation of mine contamination or
+                    explosive hazards.
+                  </li>
+                  <li>
+                    Shared services reduce information fragmentation and create
+                    a more continuous recovery workflow.
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </article>
+        </main>
+        <div data-include="/pages/includes/footer.html"></div>
+      </div>
+    </div>
+  </body>
+</html>

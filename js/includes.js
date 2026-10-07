@@ -2,11 +2,14 @@ function renderAutoGrid() {
   document.querySelectorAll("[data-auto-grid]").forEach((root) => {
     const itemWidth = Number(root.getAttribute("data-item-width") || 130);
     const step = Number(root.getAttribute("data-step") || 100);
-    const width = root.clientWidth || 0;
+    const width = root.parentElement?.clientWidth || root.clientWidth || 0;
 
     if (!width) return;
 
-    const count = Math.max(1, Math.ceil(width / itemWidth) + 2);
+    const baseCount = Math.max(1, Math.ceil(width / itemWidth) + 2);
+    const count = root.hasAttribute("data-auto-grid-track")
+      ? baseCount * 2
+      : baseCount;
     const renderedCount = Number(root.dataset.renderedCount || 0);
 
     if (renderedCount === count) return;
@@ -14,7 +17,7 @@ function renderAutoGrid() {
     root.innerHTML = "";
 
     for (let index = 0; index < count; index += 1) {
-      const value = index * step;
+      const value = (index % baseCount) * step;
       const item = document.createElement("div");
       item.className = "relative h-full flex-shrink-0";
       item.style.width = `${itemWidth}px`;

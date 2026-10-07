@@ -45,6 +45,24 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  [data-wall-grid] .folder-tab {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 46px;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  [data-wall-grid] .folder-tab > span {
+    flex: 0 0 auto;
+    margin-top: 0.15rem;
+  }
+}
+
 .company-marquee {
   position: relative;
   overflow: hidden;
@@ -85,9 +103,17 @@ body {
 }
 
 [data-auto-grid-track] {
-  position: sticky;
-  top: 64px;
-  z-index: 90;
+  width: max-content;
+  animation: nav-grid-scroll 22s linear infinite;
+}
+
+@keyframes nav-grid-scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .sticky-stack {

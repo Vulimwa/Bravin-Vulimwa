@@ -85,350 +85,480 @@
               actionable insights, smarter decisions, and real-world impact.
             </p>
           </section>
-          <div
-            class="mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 px-5 sm:px-8 md:grid-cols-2"
-          >
-            <a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-ten.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >Growing Hotter:Understanding Urban Heat in Africa's Emerging
-                Cities Using GIS and AI</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
-                >
-                  <img
-                    src="/assets/growing_hotter.png"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(297.111px, 13.7639px, 0px);
-                "
-                >See</span
-              ></a
+          <div class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+            <div
+              class="mb-10 flex flex-wrap items-center gap-2"
+              role="group"
+              aria-label="Filter projects by category"
+              data-project-filters
             >
-            <a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-one.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >ECONOMIC PROFILING DASHBOARD</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
-                >
-                  <img
-                    src="/assets/overview_dashboard.png"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
               <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(304.111px, 136.542px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-two.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                class="mr-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-black/50"
+                >Filter</span
+              >
+              <button
+                type="button"
+                class="border-2 border-[var(--ink)] bg-[var(--ink)] px-4 py-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-white"
+                data-project-filter="all"
+                aria-pressed="true"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="border-2 border-[var(--ink)] bg-white px-4 py-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)]"
+                data-project-filter="data"
+                aria-pressed="false"
+              >
+                Data
+              </button>
+              <button
+                type="button"
+                class="border-2 border-[var(--ink)] bg-white px-4 py-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)]"
+                data-project-filter="gis"
+                aria-pressed="false"
+              >
+                GIS
+              </button>
+              <button
+                type="button"
+                class="border-2 border-[var(--ink)] bg-white px-4 py-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)]"
+                data-project-filter="planning"
+                aria-pressed="false"
+              >
+                Plans
+              </button>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2"
+              data-project-grid
+            >
+              <a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning data"
+                href="/pages/template/casestudy-ten.html"
                 ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >HIFADHI LINK</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >Growing Hotter:Understanding Urban Heat in Africa's Emerging
+                  Cities Using GIS and AI</span
                 >
-                  <img
-                    src="/assets/hifadhi.png"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(205.111px, 142.542px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-three.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >MAJI NDOGO WATER CRISIS ANALYSIS</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
                 <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
                 >
-                  <img
-                    src="/assets/maji_ndogo.png"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(297.111px, 13.7639px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-four.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >MIGORI TOWN LOCAL PHYSICAL & LAND USE DEVELOPMENT PLAN</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
-                >
-                  <img
-                    src="/assets/migori_lpludp.png"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(-42.8889px, 315.431px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-five.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >AIR QUALITY PREDICTIVE ANALYTICS</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="flex aspect-[16/10] w-full items-center justify-center px-8 text-center"
-                  style="background: var(--c-cream)"
-                >
-                  <span
-                    class="font-pixel text-3xl font-bold uppercase tracking-tight text-[var(--ink)] sm:text-4xl"
-                    >AIR QUALITY PREDICTIVE ANALYTICS</span
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
                   >
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(297.111px, 313.431px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-six.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >POND SUITABILITY ANALYSIS</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
-                >
-                  <img
-                    src="/assets/pond_suitability.jpg"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(-28.8889px, -19.5695px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-seven.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >COMMUNITY LAND USE & ZONING DATABASE</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="flex aspect-[16/10] w-full items-center justify-center px-8 text-center"
-                  style="background: var(--c-mint)"
-                >
-                  <span
-                    class="font-pixel text-3xl font-bold uppercase tracking-tight text-[var(--ink)] sm:text-4xl"
-                    >COMMUNITY LAND USE & ZONING DATABASE</span
-                  >
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(388.111px, 235.097px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-eight.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >SALES PERFORMANCE INTELLIGENCE DASHBOARD</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
-                >
-                  <img
-                    src="/assets/pizza_dashboard_home.jpg"
-                    onerror="this.src = '/assets/placeholder.png'"
-                    ...
-                  />
-                </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(207.111px, 9.54166px, 0px);
-                "
-                >See</span
-              ></a
-            ><a
-              class="group relative block cursor-none"
-              href="/pages/template/casestudy-nine.html"
-              ><span
-                class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
-                ><span
-                  aria-hidden="true"
-                  class="h-2.5 w-2.5 rounded-full bg-current"
-                ></span
-                >ENCROACHMENT ANALYSIS</span
-              >
-              <div
-                class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
-              >
-                <div
-                  class="relative aspect-[16/10] w-full overflow-hidden bg-white"
-                >
-                  <div class="image-container">
                     <img
-                      src="/assets/Encroachment.png"
+                      src="/assets/growing_hotter.png"
                       onerror="this.src = '/assets/placeholder.png'"
                       ...
                     />
                   </div>
                 </div>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
-                style="
-                  mix-blend-mode: difference;
-                  transform: translate3d(482.111px, 60.5417px, 0px);
-                "
-                >See</span
-              ></a
-            >
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(297.111px, 13.7639px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning"
+                href="/pages/template/casestudy-eleven.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span>
+                  TRIPLE NEXUS TRACKER</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/triple-nexus-16.png"
+                      alt="Triple Nexus Tracker investor portal"
+                      loading="lazy"
+                      decoding="async"
+                      class="h-full w-full object-cover object-center"
+                      onerror="this.src = '/assets/placeholder.png'"
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="mix-blend-mode: difference"
+                  >See</span
+                ></a
+              >
+              <a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="data"
+                href="/pages/template/casestudy-one.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >ECONOMIC PROFILING DASHBOARD</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/overview_dashboard.png"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(304.111px, 136.542px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning"
+                href="/pages/template/casestudy-two.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >HIFADHI LINK</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/hifadhi.png"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(205.111px, 142.542px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning data"
+                href="/pages/template/casestudy-three.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >MAJI NDOGO WATER CRISIS ANALYSIS</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/maji_ndogo.png"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(297.111px, 13.7639px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning"
+                href="/pages/template/casestudy-four.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >MIGORI TOWN LOCAL PHYSICAL & LAND USE DEVELOPMENT PLAN</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/migori_lpludp.png"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(-42.8889px, 315.431px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="data"
+                href="/pages/template/casestudy-five.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >AIR QUALITY PREDICTIVE ANALYTICS</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="flex aspect-[16/10] w-full items-center justify-center px-8 text-center"
+                    style="background: var(--c-cream)"
+                  >
+                    <span
+                      class="font-pixel text-3xl font-bold uppercase tracking-tight text-[var(--ink)] sm:text-4xl"
+                      >AIR QUALITY PREDICTIVE ANALYTICS</span
+                    >
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(297.111px, 313.431px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning"
+                href="/pages/template/casestudy-six.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >POND SUITABILITY ANALYSIS</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/pond_suitability.jpg"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(-28.8889px, -19.5695px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning"
+                href="/pages/template/casestudy-seven.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >COMMUNITY LAND USE & ZONING DATABASE</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="flex aspect-[16/10] w-full items-center justify-center px-8 text-center"
+                    style="background: var(--c-mint)"
+                  >
+                    <span
+                      class="font-pixel text-3xl font-bold uppercase tracking-tight text-[var(--ink)] sm:text-4xl"
+                      >COMMUNITY LAND USE & ZONING DATABASE</span
+                    >
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(388.111px, 235.097px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="data"
+                href="/pages/template/casestudy-eight.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >SALES PERFORMANCE INTELLIGENCE DASHBOARD</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <img
+                      src="/assets/pizza_dashboard_home.jpg"
+                      onerror="this.src = '/assets/placeholder.png'"
+                      ...
+                    />
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(207.111px, 9.54166px, 0px);
+                  "
+                  >See</span
+                ></a
+              ><a
+                class="group relative block cursor-none"
+                data-project-card
+                data-project-category="gis planning"
+                href="/pages/template/casestudy-nine.html"
+                ><span
+                  class="folder-tab flex h-[46px] w-fit items-center gap-3 bg-[#e9e7e2] px-6 pr-16 font-mono text-[13px] font-semibold tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 group-hover:bg-[var(--ink)] group-hover:text-white"
+                  ><span
+                    aria-hidden="true"
+                    class="h-2.5 w-2.5 rounded-full bg-current"
+                  ></span
+                  >ENCROACHMENT ANALYSIS</span
+                >
+                <div
+                  class="bg-[#e9e7e2] p-5 transition-colors duration-200 group-hover:bg-[var(--ink)]"
+                >
+                  <div
+                    class="relative aspect-[16/10] w-full overflow-hidden bg-white"
+                  >
+                    <div class="image-container">
+                      <img
+                        src="/assets/Encroachment.png"
+                        onerror="this.src = '/assets/placeholder.png'"
+                        ...
+                      />
+                    </div>
+                  </div>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute left-0 top-0 z-10 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white text-xl font-medium text-black opacity-0 transition-opacity duration-200 will-change-transform group-hover:opacity-100"
+                  style="
+                    mix-blend-mode: difference;
+                    transform: translate3d(482.111px, 60.5417px, 0px);
+                  "
+                  >See</span
+                ></a
+              >
+            </div>
           </div>
         </main>
         <div data-include="/pages/includes/footer.html"></div>
       </div>
     </div>
 
-    <script src="" async defer></script>
+    <script>
+      const filterRoot = document.querySelector("[data-project-filters]");
+      const projectCards = Array.from(
+        document.querySelectorAll("[data-project-card]"),
+      );
+
+      filterRoot?.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-project-filter]");
+        if (!button) return;
+
+        const filter = button.dataset.projectFilter;
+        document
+          .querySelectorAll("[data-project-filter]")
+          .forEach((control) => {
+            const isSelected = control === button;
+            control.setAttribute("aria-pressed", String(isSelected));
+            control.classList.toggle("bg-[var(--ink)]", isSelected);
+            control.classList.toggle("text-white", isSelected);
+            control.classList.toggle("bg-white", !isSelected);
+            control.classList.toggle("text-[var(--ink)]", !isSelected);
+          });
+
+        projectCards.forEach((card) => {
+          const matches =
+            filter === "all" ||
+            card.dataset.projectCategory.split(" ").includes(filter);
+          card.classList.toggle("hidden", !matches);
+        });
+      });
+    </script>
   </body>
 </html>
